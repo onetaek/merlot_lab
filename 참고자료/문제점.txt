@@ -1,0 +1,3 @@
+#mainSlider #mainSliderList #mainSliderWrap dl a:hover i
+했을 때 background-color가 바뀌지 않음
+

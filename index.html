@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>메를로랩 - 메를로랩</title>
+    <script src="https://kit.fontawesome.com/9887a7c9bd.js" crossorigin="anonymous"></script>
+    
     <!-- https://merlotlab.com/ -->
     <link rel="stylesheet" href="./common.css">
   </head>
@@ -65,38 +67,43 @@
     <!--------------silder----------------->
     <section id="mainSlider">
       <h2 class="hidden">메를로랩 회사 주요 내용 소개</h2>
+      <a href="#">inquiry<span></span></a>
       <div id="mainSliderList">
-        <a href="#">inquiry</a>
         <div id="mainSliderWrap">
           <dl id="mainSlider1">
             <dt>
               Starting with merlot.lab<br />
-              <span>New Future</span> Made with Iot
+              <span>New Future</span> Made with IoT
             </dt>
             <dd>혁신과 변화의 미래 메를로랩으로부터 시작됩니다.</dd>
+            <a href="#"> view more<i class="fa-solid fa-angle-right"></i> </a>
           </dl>
           <dl id="mainSlider2">
             <dt>next network</dt>
             <dd>새로운네트워크의 시작 시작의 중심 메트를로랩</dd>
+            <a href="#"> view more<i class="fa-solid fa-angle-right"></i> </a>
           </dl>
           <dl id="mainSlider3">
-            <dt>next network</dt>
-            <dd>새로운네트워크의 시작 시작의 중심 메트를로랩</dd>
+            <dt>energy generation</dt>
+            <dd>조명으로 만드는 에너지 새로운 에너지 시대의 시작</dd>
+            <a href="#"> view more<i class="fa-solid fa-angle-right"></i> </a>
           </dl>
-          <a href="#"> view more<span></span> </a>
         </div>
-        <ul id="sliderBtn">
-          <li class="sliderBtn1">
-            <button>01. innovation & change</button>
-          </li>
-          <li class="sliderBtn2">
-            <button>02. next network</button>
-          </li>
-          <li class="sliderBtn3">
-            <button>03. energy gneration</button>
-          </li>
-        </ul>
-        <button class="sliderPlayBtn">일시정지</button>
+        <div id="slierBtnWrap">
+          <ul id="sliderBtn">
+            <li class="sliderBtn1">
+              <button><span>01.</span>innovation & change</button>
+            </li>
+            <li class="sliderBtn2">
+              <button><span>02.</span>next network</button>
+            </li>
+            <li class="sliderBtn3">
+              <button><span>03.</span>energy gneration</button>
+            </li>
+          </ul>
+          <button class="sliderPlayBtn"><i class="fa-solid fa-pause"></i></button>
+          
+        </div>
       </div>
     </section>
     <!------------------main------------------>
@@ -370,5 +377,7 @@
         </div>
       </footer>
     </main>
+
+    <script src="./app.js"></script>
   </body>
 </html>

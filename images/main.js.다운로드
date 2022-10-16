@@ -1,0 +1,81 @@
+$(function(){
+	/* Main Visual */
+	$("#main-visual").slick({
+		dots: false,
+		arrows: false,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: "linear",
+		autoplay: true,
+		autoplaySpeed: 5000
+	}).on("afterChange", function(event, slick, currentSlide, nextSlide){
+    $(".__main-visual__link").removeClass("animate");
+		$(".__main-visual__link").eq(currentSlide).addClass("animate");
+	}),
+	$(".__main-visual__link").eq(0).addClass("animate");
+	$("#vis-ctrl").on("click", function(){
+		$(this).toggleClass("pause");
+		if(!$("#vis-ctrl").hasClass("pause")) {
+			$("#main-visual").slick("slickPlay");
+			$(".__main-visual__link.active").removeClass("active").addClass("animate");
+		} else {
+			$("#main-visual").slick("slickPause");
+			$(".__main-visual__link.animate").removeClass("animate").addClass("active");
+		}
+	}),
+	$(".__main-visual__link").on("click", function(){
+		var idx = $(this).parent().index();
+		$("#main-visual").slick("slickGoTo", idx)
+	});
+
+	/* Main Technology */
+	$("#main-technology-slider").slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		infinite: true,
+		variableWidth: true,
+		prevArrow: "#main-technology-slider-prev",
+		nextArrow: "#main-technology-slider-next",
+		responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					variableWidth: false,
+				}
+			},
+			{
+				breakpoint: 970,
+				settings: {
+					slidesToShow: 2,
+					variableWidth: false,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					variableWidth: false,
+					dots: true
+				}
+			}
+		]
+	});
+
+	$(".__main-cs__tab-link").on("click", function(e){
+		e.preventDefault();
+		var b_idx = $(this).attr("data-idx");
+		$(".__main-cs__tab-link.active").removeClass("active");
+		$(this).addClass("active");
+
+		$(".main-cs__item.active").removeClass("active");
+		$(".main-cs__item.item-" + b_idx).addClass("active");
+
+		if(b_idx == 3){
+			$(".__brd-link").attr("href", "/cs/notice");
+		}else{
+			$(".__brd-link").attr("href", "/cs/news");
+		}
+	});
+});

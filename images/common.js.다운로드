@@ -1,0 +1,274 @@
+$(function(){
+
+	/**********************************************/
+	// Screen
+	/**********************************************/
+	$.belowthefold = function(element, settings) {
+		var fold = $(window).height() + $(window).scrollTop();
+		return fold <= $(element).offset().top - settings.threshold;
+	};
+	$.abovethetop = function(element, settings) {
+		var top = $(window).scrollTop();
+		return top >= $(element).offset().top + $(element).height() - settings.threshold;
+	};
+	$.rightofscreen = function(element, settings) {
+		var fold = $(window).width() + $(window).scrollLeft();
+		return fold <= $(element).offset().left - settings.threshold;
+	};
+	$.leftofscreen = function(element, settings) {
+		var left = $(window).scrollLeft();
+		return left >= $(element).offset().left + $(element).width() - settings.threshold;
+	};
+	$.inviewport = function(element, settings) {
+		return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+	};
+	$.extend($.expr[':'], {
+		"below-the-fold": function(a, i, m) {
+			return $.belowthefold(a, {threshold : 0});
+		},"above-the-top": function(a, i, m) {
+			return $.abovethetop(a, {threshold : 0});
+		},"left-of-screen": function(a, i, m) {
+			return $.leftofscreen(a, {threshold : 0});
+		},"right-of-screen": function(a, i, m) {
+			return $.rightofscreen(a, {threshold : 0});
+		},"in-viewport": function(a, i, m) {
+			return $.inviewport(a, {threshold : -250});
+		}
+	});
+
+
+	/**********************************************/
+	// Common
+	/**********************************************/
+	var agt = navigator.userAgent,
+		isMobile = (/(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|windows phone)/.test(agt));
+
+	function nl2br(str, is_xhtml){
+		var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
+	}
+	function pop_open(id){
+		$("#"+id).addClass('show'),
+		$("#mask").addClass('show').attr("data-open", id);
+	}
+	function pop_close(id){
+		$("#"+id).removeClass('show'),
+		$("#mask").removeClass('show').attr("data-open", "");
+	}
+	$("#mask").click(function(e){
+		e.preventDefault();
+		var id = $(this).attr('data-open');
+		if(id == 'mobile-menu'){
+			$("body").removeClass("body-mobile"),
+			$("#header").removeClass("mobile"),
+			$("#mobile-open").removeClass("close");
+			pop_close(id);
+		}else if(id){
+			pop_close(id);
+		}
+		return;
+	});
+	$(".scroll-guide").on("click", function () {
+    $(this).remove();
+  }),
+  $(".scroll-table").on("scroll", function () {
+    $(this).find(".scroll-guide").remove();
+  });
+
+
+	/**********************************************/
+	// Scroll & Load
+	// 안쓰는 기능 & 주석 삭제하고 사용하길 바람.
+	/**********************************************/
+	$(window)
+		.on('load', loadHandler)
+		.on('scroll', scrollHandler);
+
+	function loadHandler(){
+		var t = $(this).scrollTop();
+		floating(t);
+		setTimeout(function(){
+			start_animate();
+		}, 130);
+	}
+
+	function scrollHandler(){
+		var t = $(this).scrollTop();
+		floating(t); // 플로팅 기능
+		bottomTopAr(t); // 상단으로 버튼 기능
+		setTimeout(function(){
+			start_animate(); // 애니메이션 기능
+		}, 100);
+	}
+	function bottomTopAr(t){
+		(t > 550) ? $('#btn_top').addClass('show') : $('#btn_top').removeClass('show');
+	}
+	function floating(t){
+		(t > 50) ? $("#header").addClass("floating") : $("#header").removeClass("floating");
+		return;
+	}
+	function start_animate(){
+		if(isMobile) return false;
+		var j = 0;
+		$(".animate-element:in-viewport").each(function(){
+			var $this = $(this);
+			if (!$this.hasClass("start-animate") && !$this.hasClass("animated")) {
+				$this.addClass("start-animate");
+				setTimeout(function(){
+					$this.addClass("animated");
+				}, 250 * j);
+				j++;
+			};
+		});
+	}
+	function mediaWidth(){
+		var e = window, a = 'inner';
+		if (!('innerWidth' in window )) {
+			a = 'client';
+			e = document.documentElement || document.body;
+		}
+		return e[a+'Width'];
+	}
+	var win_w = mediaWidth();
+
+
+	/**********************************************/
+	// 메인 메뉴
+	/**********************************************/
+	$("#gnb .gnb__menu > .gnb__link, #gnb .gnb__menu .sub-nav").on("mouseenter focusin", function(){
+		$(this).parent().addClass('hover');
+	}).on("mouseleave focusout", function(){
+		$(this).parent().removeClass('hover');
+	});
+
+
+	/**********************************************/
+	// 모바일 메뉴
+	/**********************************************/
+	$("#mobile-open, #site-map-open").click(function(e){
+		e.preventDefault();
+		if($("#header").hasClass('mobile')){
+			m_menu_close();
+		}else{
+			m_menu_open();
+		}
+	}),
+	$("#mobile-open.close, #site-map-close").click(function(e){
+		e.preventDefault(),
+		m_menu_close();
+	}),
+	$("#gnb-mobile .gnb__menu > .gnb__link").click(function(e){
+		if(mediaWidth() <= 970) {
+			e.preventDefault();
+			var menu = $(this).parent(),
+					sub_nav = $(this).next(".sub-nav");
+
+			$("#gnb-mobile .gnb__menu").removeClass("open");
+			$(".sub-nav").stop().slideUp(350);
+			if(!$("#gnb-mobile .gnb__menu").hasClass("open")) {
+				menu.addClass("open");
+				sub_nav.stop().slideToggle(350);
+			}
+		}
+	});
+	$("#gnb-mobile .gnb__menu").each(function(){
+		if($(this).hasClass('active') && $(this).hasClass('has-child')){
+		 	$(this).addClass('open');
+			$(this).children('.sub-nav').show();
+		}
+	});
+	$(window).resize(function(){
+		$("#gnb-mobile .gnb__menu").each(function(){
+			if($(this).hasClass('active') && $(this).hasClass('has-child')){
+				$(this).children('.sub-nav').show();
+			}
+		});
+	});
+
+	function m_menu_open(){
+		$("body").addClass("body-mobile"),
+		$("#header").addClass("mobile"),
+		$("#mobile-open").addClass("close"),
+		pop_open("mobile-menu");
+	}
+	function m_menu_close(){
+		$("body").removeClass("body-mobile"),
+		$("#header").removeClass("mobile"),
+		$("#mobile-open").removeClass("close"),
+		pop_close("mobile-menu");
+	}
+
+
+	/**********************************************/
+	// 약관 팝업
+	/**********************************************/
+	// pop open
+	$("a.nxTerm_pop").click(function(e){
+		e.preventDefault();
+		var idx = $(this).data('idx');
+		$.ajax({
+			type : 'post',
+			url  : base_url + 'common/term',
+			data : {idx : idx},
+			dataType : 'json',
+			success : function(data){
+				$("#nxTerm_txt").text(data.name);
+				$("#nxTermCon").text("");
+				$("#nxTermCon").append(nl2br(data.contents));
+				pop_open("pop_term");
+			}
+		});
+	}),
+	// close
+	$(".nxPopClose").click(function(e){
+		e.preventDefault();
+		var id = $(this).data('id');
+		pop_close(id);
+	})
+
+
+	/**********************************************/
+	// FAQ
+	/**********************************************/
+	$(".nxFaq li a").click(function(e){
+		e.preventDefault();
+		var $li = $(this).parent();
+		$li.toggleClass("open");
+		$li.siblings().removeClass("open");
+		$(".answer").stop().slideUp(350);
+		$li.children('.answer').stop().slideToggle(350);
+	});
+
+
+	/**********************************************/
+	// 서브 - BreadCrumb Nav
+	/**********************************************/
+	$("#sub-bread-nav .sub-bread-nav__item > .sub-bread-nav__link").click(function(e){
+		if($(this).parent().hasClass('sub-bread-nav__home')){
+			return true;
+		}else{
+			e.preventDefault();
+			$(this).parent().toggleClass('open');
+		}
+	});
+
+
+	/**********************************************/
+	// Document Click
+	/**********************************************/
+	$(document).mouseup(function(e){
+		if($(".language_switcher").has(e.target).length === 0){
+			$(".language_switcher").removeClass('open');
+		}
+		if($("#sub-bread-nav > .sub-bread-nav__depth1").has(e.target).length === 0){
+			$("#sub-bread-nav > .sub-bread-nav__depth1").removeClass('open');
+		}
+		if($("#sub-bread-nav > .sub-bread-nav__depth2").has(e.target).length === 0){
+			$("#sub-bread-nav > .sub-bread-nav__depth2").removeClass('open');
+		}
+		if($(".nxFaq.toggle_type").has(e.target).length === 0){
+			$(".nxFaq.toggle_type > li").removeClass('open');
+			$(".answer").stop().slideUp(350);
+		}
+	});
+});
