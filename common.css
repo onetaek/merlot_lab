@@ -65,7 +65,6 @@ button {
   display: block;
   width: 155px;
   height: 26px;
-  overflow: hidden;
   font-size: 0;
   background:url(./images/logo.png) no-repeat center center;
   background-size: 100% auto;
@@ -85,10 +84,8 @@ button {
   background: #583cf2;
 }
 #header #gnb #gnbList > li:hover .snb {
-  opacity: 1;
-  
+  opacity: 1; 
 }
-
 #header #gnb #gnbList > li > a {
   color: #fff;
   height: 100%;
@@ -97,7 +94,6 @@ button {
   line-height: 80px;
   position:relative;
   display:block;
- 
 }
 #header #gnb #gnbList > li > a:after {
   content: "";
@@ -137,9 +133,8 @@ button {
 #mainSlider {
   width: 100%;
   height: 100vh;
-  background: url(./images/main_visual_img1.jpg) no-repeat top center;
+  background: url(./images/main_visual_img1.jpg) no-repeat center center/cover;
 }
-
 #mainSlider > a {
   width: 165px;
   height: 45px;
@@ -222,8 +217,8 @@ button {
   color: rgba(255, 255, 255, 0.7);
 }
 #mainSlider #mainSliderList #mainSliderWrap dl a {
-  /* background:red;
-  width:200px; */
+  width:148px;
+  
   display: block;
   margin-top: 55px;
   font-size: 14px;
@@ -248,6 +243,7 @@ button {
 }
 #mainSlider #mainSliderList #mainSliderWrap #mainSlider1 {
   opacity: 1;
+  z-index: 1;
 }
 #mainSlider #mainSliderList #mainSliderWrap #mainSlider2 {
   opacity: 0;
@@ -311,3 +307,69 @@ button {
   font-size: 20px;
   color: #fff;
 }
+/*------section3----------*/
+#section3{
+    width: 100%;
+    height: 770px;
+    padding: 120px 0 230px;
+    background: url(./images/main_ir_bg.jpg) no-repeat center center / cover;
+}
+#section3 > div{
+    margin:0 auto;
+    width:1340px; height:420px; background:red;
+    display:flex;
+    justify-content: space-between;
+}
+#section3 > div > .section3Title{
+    padding: 60px 40px;
+    width:370px;
+    height:100%;
+    background: url(./images/main_ir_img1.jpg) no-repeat center center / cover;
+}
+#section3 > div > .section3Title a{
+    display:block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#section3 > div > .section3Title a h2{
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1;
+    color:#fff;
+}
+#section3 > div > .section3Title a p{
+    margin-top:19px;
+    color:rgba(255,255,255,.6);
+}
+#section3 > div > .section3Title a p:last-of-type{
+    margin-top:171px;
+    color:#fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform:uppercase;
+    position:relative;
+}
+#section3 > div > .section3Title a p:last-of-type::after{
+    content:"+";
+    margin-left:16px;
+}
+#section3 > div > .contentWrap{
+    width:870px;
+    height:420px;
+    background:green;
+}
+#section3 > div > .contentWrap > section{}
+#section3 > div > .contentWrap > .news{}
+#section3 > div > .contentWrap > .notice{}
+#section3 > div > .contentWrap > section h3{}
+#section3 > div > .contentWrap > section ul{}
+#section3 > div > .contentWrap > section ul li{}
+#section3 > div > .contentWrap > section ul li > a {}
+#section3 > div > .contentWrap > section ul li .news_1{}
+#section3 > div > .contentWrap > section ul li .news_2{}
+#section3 > div > .contentWrap > section ul li > a img{}
+#section3 > div > .contentWrap > section ul li > a > div{}
+#section3 > div > .contentWrap > section ul li > a > div > p{}
+#section3 > div > .contentWrap > section > a{}
