@@ -53,7 +53,8 @@ button {
 #header {
   padding: 0 20px 0 80px;
   margin: 0 auto;
-  width: 1460px;
+  width:100%;
+  max-width: 1460px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -307,58 +308,164 @@ button {
   font-size: 20px;
   color: #fff;
 }
-/*------section3----------*/
-#section3{
-    width: 100%;
-    height: 770px;
-    padding: 120px 0 230px;
-    background: url(./images/main_ir_bg.jpg) no-repeat center center / cover;
+/*-----------------------main-------------------*/
+main{}
+/*-------------section1----------------*/
+#section1{width:100%;height:1977px;
+  position:relative;padding: 150px 0 160px;
+  background:rgb(255, 219, 219) url(./images/main_business_bg1.jpg) no-repeat top center;;
+  /* z-index:-1; */
 }
-#section3 > div{
-    margin:0 auto;
-    width:1340px; height:420px; background:red;
-    display:flex;
+#section1::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 850px;
+  background: url(./images/main_business_bg2.jpg) no-repeat top center;
+  transform: translateX(-50%);
+  /* z-index:-2; */
+}
+#section1 .contentWrap{margin:0 auto;width:100%;
+  max-width:1340px;height: 100%;
+  padding:0 20px;
+  
+}
+#section1 .contentWrap .contentWrapTop{
+  width:100%;height:621px;
+  
+  display: flex;
     justify-content: space-between;
+    
 }
-#section3 > div > .section3Title{
-    padding: 60px 40px;
-    width:370px;
-    height:100%;
-    background: url(./images/main_ir_img1.jpg) no-repeat center center / cover;
+#section1 .contentWrap .contentWrapTop .content1{
+  padding-top:120px;
 }
-#section3 > div > .section3Title a{
-    display:block;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+#section1 .contentWrap .contentWrapTop .content1 span{
+  height:28px;
+  display:block;
+  background:url(./images/merlot.png) no-repeat center center / 131px;
+  width:131px;
+  text-indent: -9999px;
 }
-#section3 > div > .section3Title a h2{
-    font-size: 38px;
+#section1 .contentWrap .contentWrapTop .content1 h2{
+  font-size: 62px;
     font-weight: 700;
     line-height: 1;
-    color:#fff;
+  
+  padding-left: 5px;
+  text-transform: uppercase;
+  margin-top:10px;
 }
-#section3 > div > .section3Title a p{
-    margin-top:19px;
-    color:rgba(255,255,255,.6);
+#section1 .contentWrap .contentWrapTop .content1 p{
+  margin-top: 20px;
+  font-size: 18px;
+    color: #444;
 }
-#section3 > div > .section3Title a p:last-of-type{
-    margin-top:171px;
-    color:#fff;
+#section1 .contentWrap .contentWrapTop .content1 > a{
+  display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
     font-size: 14px;
     font-weight: 600;
-    text-transform:uppercase;
-    position:relative;
+    color: #fff;
+    border-radius: 25px;
+    background-color: #583cf2;
+    text-transform: uppercase;
+    margin-top:45px;
+    line-height: 50px;
+}
+#section1 .contentWrap .contentWrapTop .content2Wrap{
+  /* background:red; */
+}
+#section1 .contentWrap .contentWrapTop .content2Wrap > a {
+  /* display:block;background:url(./images/main_business_img1.jpg) no-repeat top center;
+  width:840px;height:621px; */
+  
+}
+#section1 .contentWrap .contentWrapTop .content2Wrap > a > .content2{
+  width:200px;height: 200px; background:yellow;
+}
+#section1 .contentWrap .contentWrapTop .content2Wrap > a .content2 h3{}
+#section1 .contentWrap .contentWrapTop .content2Wrap > a .content2 h3 span{}
+#section1 .contentWrap .contentWrapTop .content2Wrap > a .content2 p{}
+#section1 .contentWrap .contentWrapTop .content2Wrap > a .content2 a{}
+
+
+#section1 .contentWrap .contentWrapBottom{
+  width:100%;height:966px;background:green;
+  margin-top:80px;
+}
+#section1 .contentWrap .contentWrapBottom .content3Wrap{}
+#section1 .contentWrap .contentWrapBottom .content3Wrap > a{}
+#section1 .contentWrap .contentWrapBottom .content3Wrap > a .content3{}
+#section1 .contentWrap .contentWrapBottom .content3Wrap > a .content3 h3{}
+#section1 .contentWrap .contentWrapBottom .content3Wrap > a .content3 h3 span{}
+#section1 .contentWrap .contentWrapBottom .content3Wrap > a .content3 p{}
+#section1 .contentWrap .contentWrapBottom .content3Wrap > a .content3 a{}
+#section1 .contentWrap .contentWrapBottom .content4Wrap{}
+#section1 .contentWrap .contentWrapBottom .content4Wrap > a{}
+#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4{}
+#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 h3{}
+#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 h3 span{}
+#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 p{}
+#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 a{}
+/*-------------section2----------------*/
+#section2{width:100%; height:1005px;background:rgb(255, 236, 201);}
+/*-------------section3----------------*/
+#section3{
+  width: 100%;
+  height: 770px;
+  padding: 120px 0 230px;
+  background: url(./images/main_ir_bg.jpg) no-repeat center center / cover;
+}
+#section3 > div{
+  margin:0 auto;
+  width:1340px; height:420px; background:red;
+  display:flex;
+  justify-content: space-between;
+}
+#section3 > div > .section3Title{
+  padding: 60px 40px;
+  width:370px;
+  height:100%;
+  background: url(./images/main_ir_img1.jpg) no-repeat center center / cover;
+}
+#section3 > div > .section3Title a{
+  display:block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#section3 > div > .section3Title a h2{
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  color:#fff;
+}
+#section3 > div > .section3Title a p{
+  margin-top:19px;
+  color:rgba(255,255,255,.6);
+}
+#section3 > div > .section3Title a p:last-of-type{
+  margin-top:171px;
+  color:#fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform:uppercase;
+  position:relative;
 }
 #section3 > div > .section3Title a p:last-of-type::after{
-    content:"+";
-    margin-left:16px;
+  content:"+";
+  margin-left:16px;
 }
 #section3 > div > .contentWrap{
-    width:870px;
-    height:420px;
-    background:green;
+  width:870px;
+  height:420px;
+  background:green;
 }
 #section3 > div > .contentWrap > section{}
 #section3 > div > .contentWrap > .news{}
@@ -373,3 +480,7 @@ button {
 #section3 > div > .contentWrap > section ul li > a > div{}
 #section3 > div > .contentWrap > section ul li > a > div > p{}
 #section3 > div > .contentWrap > section > a{}
+/*-------------section4----------------*/
+#section4{width:100%;height:450px;background:rgb(208, 255, 207);}
+/*-------------footer----------------*/
+#footer{width:100%;height:316.5px;background:rgb(189, 189, 255);}
