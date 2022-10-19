@@ -495,182 +495,168 @@ main {
 #section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 p {
 }
 /*-------------section2----------------*/
-#section2{width: 100%;height: 1005px;
-  padding-bottom:220px;
+#section2 {
+  width: 100%;
+  height: 1005px;
+  padding-bottom: 220px;
   /* background:rgb(179, 255, 179); */
-  position:relative;
+  position: relative;
 }
-#section2 .section2Title{width:100%;
-  background:url(./images/main_technology_bg.jpg) no-repeat #171d3d bottom 140px right;
-margin:0 auto;height: 500px;padding-top:100px;}
-#section2 .section2Title .section2Text {padding:0 20px;
-  
+#section2 .section2Title {
+  width: 100%;
+  background: url(./images/main_technology_bg.jpg) no-repeat #171d3d bottom
+    140px right;
+  margin: 0 auto;
+  height: 500px;
+  padding-top: 100px;
 }
-#section2 .section2Title .section2Text > div{
-  width:1340px;display:flex;flex-direction: column-reverse;
+#section2 .section2Title .section2Text {
+  padding: 0 20px;
+}
+#section2 .section2Title .section2Text > div {
+  width: 1340px;
+  display: flex;
+  flex-direction: column-reverse;
   justify-content: flex-end;
-  margin:0 auto;height:300px; 
+  margin: 0 auto;
+  height: 300px;
   /* background:pink; */
 }
-#section2 .section2Title .section2Text h2{font-size: 50px;
-  font-weight: 700;text-transform: uppercase;color:#fff;
-  line-height: 1;margin-top: 10px;}
-#section2 .section2Title .section2Text p{font-size: 18px;
-  color: #babbbe;}
-#section2 .section2Bottom{width:1340px;height: 460px;
-  margin:-175px auto 0;
+#section2 .section2Title .section2Text h2 {
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  margin-top: 10px;
+}
+#section2 .section2Title .section2Text p {
+  font-size: 18px;
+  color: #babbbe;
+}
+#section2 .section2Bottom {
+  width: 1340px;
+  height: 460px;
+  margin: -175px auto 0;
   /* background:rgb(163, 163, 255); */
   background-color: #fff;
 
-  position:relative;
+  position: relative;
 }
-#section2 .section2Bottom::after{
-  content:"";
-    position: absolute;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    /* background-color: rgb(163, 163, 255); */
-    background-color: #fff;
-    z-index: 1;
-}  
-#section2 .section2Bottom .contentWrap{
+#section2 .section2Bottom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(163, 163, 255); */
+  background-color: #fff;
+  z-index: 1;
+  overflow: hidden;
+}
+#section2 .section2Bottom .contentWrap {
   padding: 60px 20px 0 80px;
   z-index: 100;
-  display:flex;
-  width:2000px;
-  position:relative;
+  display: flex;
+  width: 2000px;
+  position: relative;
 }
-#section2 .section2Bottom .contentWrap a{
-  width:450px;
-  height:404px;
-  padding:0 15px;
-  display:block;
+#section2 .section2Bottom .contentWrap a {
+  width: 450px;
+  height: 404px;
+  padding: 0 15px;
+  display: block;
   /* background:rgb(255, 92, 119); */
 }
-#section2 .section2Bottom .contentWrap a .content{}
-#section2 .section2Bottom .contentWrap a .content .contentImg{
+#section2 .section2Bottom .contentWrap a .content {
+}
+#section2 .section2Bottom .contentWrap a .content .contentImg {
   text-indent: -9999px;
-  width:420px;height: 275px;
+  width: 420px;
+  height: 275px;
   margin-bottom: 20px;
 }
-#section2 .contentWrap .content1 { background-image: url(./images/main_technology_img1.jpg) ; }
-#section2 .contentWrap .content2 { background-image: url(./images/main_technology_img2.jpg) ; }
-#section2 .contentWrap .content3 { background-image: url(./images/main_technology_img3.jpg) ; }
-#section2 .contentWrap .content4 { background-image: url(./images/main_technology_img4.jpg) ; }
-#section2 .contentWrap .content5 { background-image: url(./images/main_technology_img5.jpg) ; }
-#section2 .section2Bottom .contentWrap a .content .techCont{
+#section2 .contentWrap .content1 {
+  background-image: url(./images/main_technology_img1.jpg);
 }
-#section2 .section2Bottom .contentWrap a .content .techCont h3{    font-size: 24px;
+#section2 .contentWrap .content2 {
+  background-image: url(./images/main_technology_img2.jpg);
+}
+#section2 .contentWrap .content3 {
+  background-image: url(./images/main_technology_img3.jpg);
+}
+#section2 .contentWrap .content4 {
+  background-image: url(./images/main_technology_img4.jpg);
+}
+#section2 .contentWrap .content5 {
+  background-image: url(./images/main_technology_img5.jpg);
+}
+#section2 .section2Bottom .contentWrap a .content .techCont {
+}
+#section2 .section2Bottom .contentWrap a .content .techCont h3 {
+  font-size: 24px;
   font-weight: 700;
-
 }
-#section2 .section2Bottom .contentWrap a .content .techCont h3 span{
+#section2 .section2Bottom .contentWrap a .content .techCont h3 span {
   font-size: 15px;
   font-weight: 700;
   color: #583cf2;
-  margin-right:20px;
+  margin-right: 20px;
 }
-#section2 .section2Bottom .contentWrap a .content .techCont p{
+#section2 .section2Bottom .contentWrap a .content .techCont p {
   margin-top: 15px;
-    font-size: 16px;
-    color: #5d5d5d;
-    margin-left:45px;
+  font-size: 16px;
+  color: #5d5d5d;
+  margin-left: 45px;
 }
-#section2 .section2Bottom #section2TitleBtn{
+#section2 .section2Bottom #section2TitleBtn {
   /* background:red;
   position:absolute; top:0; left:0; */
 }
-#section2 .section2Bottom #section2TitleBtn button{
-  
+#section2 .section2Bottom #section2TitleBtn button {
 }
-#section2 .section2Bottom #section2TitleBtn button.left{
-
+#section2 .section2Bottom #section2TitleBtn button.left {
 }
-#section2 .section2Bottom #section2TitleBtn button.right{
-
+#section2 .section2Bottom #section2TitleBtn button.right {
 }
 #section2 .section2Bottom #section2WrapBtn {
   /* background:red; */
   text-align: center;
 }
-#section2 .section2Bottom #section2WrapBtn button{
-  position:relative;
-  top:30px;
+#section2 .section2Bottom #section2WrapBtn button {
+  position: relative;
+  top: 30px;
   width: 12px;
-    height: 12px;
-text-indent: -9999px;
-position:relative;
-margin:0 4px;
+  height: 12px;
+  text-indent: -9999px;
+  position: relative;
+  margin: 0 4px;
 }
-#section2 .section2Bottom #section2WrapBtn button::before{
-
-  content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 12px;
-    height: 12px;
-    opacity: .25;
-    background-color: #583cf2;
-    border-radius: 50%;
+#section2 .section2Bottom #section2WrapBtn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  opacity: 0.25;
+  background-color: #583cf2;
+  border-radius: 50%;
 }
-#section2 .section2Bottom #section2WrapBtn button.one{}
-#section2 .section2Bottom #section2WrapBtn button.two{}
-#section2 .section2Bottom #section2WrapBtn button.three{}
-#section2 .section2Bottom #section2WrapBtn button.four{}
-#section2 .section2Bottom #section2WrapBtn button.five{}
-
-/* #section2 { 
-  width: 100%; height: 785px; 
-  margin: 0 auto; 
-  padding-bottom: 220px; 
-  background-color: cadetblue; }
-.section2Title { 
-      width: 100%; height: 500px; 
-      background: url(./images/main_technology_bg.jpg)no-repeat center/100% 500px;
-      background: rgb(201, 142, 108);
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: column-reverse; }
-.section2Title h2 { color: #fff; font-size: 36px; 
-         width: 1360px; height: 150px;        
-         text-transform: uppercase;
-         left: 50px;
-         position: absolute; left: 100px;}
-.section2Title p { color: #fff; width: 725px; height: 24px; 
-width: 1340px;}
-
-/* ----테크놀로지 파트 이미지 슬라이드 ----*/
-
-/* #section2 .contentWrap { position: absolute; left: 150px; top: -150px;
-              width: 1340px; height: 460px;
-              background-color: olive;
-              display: flex;
-              align-items: center;}
-#section2 .contentWrap .content { width: 450px; height: 404px; margin : 30px 15px;
-                     background-color: skyblue;
-                     background: no-repeat center / 440px 270px;
-                     display: flex;
-                     flex-direction: column-reverse;
-                     align-items: center;
-                     transition: 0.5s;
-                     overflow: hidden;
-                      }
-
-.con .content1 { background-image: url(../images/main_technology_img1.jpg) ; }
-#section2 .contentWrap .content2 { background-image: url(../images/main_technology_img2.jpg) ; }
-#section2 .contentWrap .content3 { background-image: url(../images/main_technology_img3.jpg) ; }
-#section2 .contentWrap .content4 { background-image: url(../images/main_technology_img4.jpg) ; }
-#section2 .contentWrap .content5 { background-image: url(../images/main_technology_img5.jpg) ; }
-
-.cont:hover { transform: scale(1.2); }
-
-.cont .techContent { padding-top: 10px; } */ */
-/*-------------section3----------------*/
+#section2 .section2Bottom #section2WrapBtn button.one {
+}
+#section2 .section2Bottom #section2WrapBtn button.two {
+}
+#section2 .section2Bottom #section2WrapBtn button.three {
+}
+#section2 .section2Bottom #section2WrapBtn button.four {
+}
+#section2 .section2Bottom #section2WrapBtn button.five {
+}
+/* -------------section3----------------
 #section3 {
-  display:none;
+  display:block;
   width: 100%;
   height: 770px;
   padding: 120px 0 230px;
@@ -818,63 +804,283 @@ width: 1340px;}
   top: 0;
   right: 0;
   background: yellow;
+} */
+
+/*-------------------------용화형section3----------------------------------------------*/
+#section3 {
+  padding: 120px 0 230px 0;
+  width: 100%;
+  height: 770px;
+  background: url(./images/main_ir_bg.jpg) no-repeat center center;
 }
+#section3 > div {
+  margin: 0 auto;
+  width: 1340px;
+  height: 420px;
+  display: flex;
+  justify-content: space-between;
+}
+#section3 > div .section3Title {
+  padding: 60px 40px;
+  width: 370px;
+  height: 420px;
+  background: url(./images/main_ir_img1.jpg) center center;
+}
+#section3 > div .section3Title a {
+  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#section3 > div .section3Title a h2 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+#section3 > div .section3Title a > p {
+  margin-top: 19px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+#section3 > div .section3Title a > p:last-of-type {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: auto;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  position: relative;
+}
+#section3 > div .section3Title a > p:last-of-type::after {
+  content: "+";
+  /* margin-left: 15px; */
+  position: absolute;
+  left: 100px;
+  transition: 0.3s;
+  line-height: 100%;
+}
+#section3 > div .section3Title a > p:last-of-type:hover::after {
+  transform: rotate(90deg);
+}
+#section3 > div .contentWrap {
+  width: 870px;
+  height: 420px;
+}
+#section3 > div .contentWrap > section {
+  position: absolute;
+}
+#section3 > div .contentWrap > .news {
+  /* display: none; */
+  position: relative;
+}
+#section3 > div .contentWrap > .notice {
+  display: none;
+}
+#section3 > div .contentWrap > section h3 {
+  font-size: 100%;
+  color: #777;
+  /* z-index: 50; font-size: 100%;
+border: 0;
+vertical-align: baseline;     padding: 0;
+margin: 0;
+box-sizing: border-box;*/
+}
+#section3 > div .contentWrap > .notice h3 {
+  color: #777;
+  position: relative;
+  left: 100px;
+  font-size: 100%;
+}
+#section3 > div .contentWrap > section > ul {
+  max-width: 870px;
+  margin-top: 15px;
+  border-top: 2px solid #222;
+}
+#section3 > div .contentWrap > section > ul li {
+}
+#section3 > div .contentWrap > section > ul li a {
+  padding: 22px 10px;
+}
+#section3 > div .contentWrap > section > ul li .news_1 {
+  display: flex;
+}
+#section3 > div .contentWrap > section > ul li .news_2 {
+  display: flex;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+#section3 > div .contentWrap > section > ul li a img {
+  width: 230px;
+  height: 112px;
+  display: block;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  max-width: 230px;
+  overflow: hidden;
+  margin-right: 40px;
+  border: 1px solid #e5e3e8;
+  object-fit: cover;
+  top: 20px;
+}
+
+#section3 > div .contentWrap > section > ul li a #slslsls {
+  position: relative;
+  width: 100%;
+  max-width: 230px;
+  overflow: hidden;
+  margin-right: 40px;
+  border: 1px solid #e5e3e8;
+  object-fit: cover;
+  top: 10px;
+}
+#section3 > div .contentWrap > section > ul li a > div {
+  width: 580px;
+}
+#section3 > div .contentWrap > section > ul li a div .dd {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+#section3 > div .contentWrap > section > ul li a div p {
+  font-size: 14px;
+  color: #888;
+}
+#section3 > div .contentWrap > section > ul li a > div p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px 0 10px;
+}
+#section3 > div .contentWrap > section > a {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+  top: 5px;
+  right: 35px;
+  text-transform: uppercase;
+}
+#section3 > div .contentWrap > section > a::after {
+  content: "+";
+  position: absolute;
+  top:0;
+  right:-30px;
+  transition: 0.3s;
+}
+#section3 > div .contentWrap > section > ul li .notice_1 {
+  display: flex;
+}
+#section3 > div .contentWrap > section > ul li .notice_2 {
+  display: flex;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+/*---------------------------------------------------------------------------------------------*/
 /*-------------section4----------------*/
 #section4 {
   width: 100%;
   height: 450px;
-  background: rgb(208, 255, 207);
+  /* background: rgb(208, 255, 207); */
   /* background-color: #242424; */
-  padding-top: 125px;
+  position: relative;
+  background-color: #242424;
 }
-#section4 .locationHouse {
-  margin:0 auto;
-  max-width: 1340px;
-  height: 390px;
-  background: yellow;
+#section4 .locationWrap {
+  margin: 0 auto;
+  width: 1340px;
+  height: 450px;
+  display: flex;
+  justify-content: start;
+}
+#section4 .locationWrap .locationHouse {
+  width: 480px;
+  height: 450px;
+  /* background: yellow; */
+  padding-top: 125px;
 }
 #section4 .locationHouse > h3 {
   font-size: 48px;
-    font-weight: 700;
-    color: #fff!important;
-    text-transform: uppercase;
+  font-weight: 700;
+  color: #fff !important;
+  text-transform: capitalize;
 }
 #section4 .locationHouse h3 span {
   font-weight: 700;
   line-height: 1;
   font-size: 18px;
-    color: #6f6f6f;
+  color: #6f6f6f;
+  margin-left: 10px;
 }
 #section4 .locationHouse p {
-  margin-top:25px;
-  width:100%;
+  margin-top: 25px;
+  width: 100%;
   height: 52px;
-    font-size: 17px;
-    color: #bbb;
+  font-size: 17px;
+  color: #bbb;
 }
 #section4 .locationHouse div {
-  margin-top: 80px;
-  display:flex;
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
 }
 #section4 .locationHouse div a {
-  display:block;
-    width: 50%;
-    max-width: 200px;
-    height: 60px;
-    padding: 0 10px;
-    margin-right: 30px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    border-bottom: 2px solid #fff;
+  width: 50%;
+  max-width: 200px;
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  line-height: 60px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
 }
-#section4 .locationMap {
+#section4 .locationHouse div a i {
+  display: flex;
+  align-items: center;
+}
+#section4 .locationWrap .locationMap {
+  width: 1100px;
+  height: 550px;
+  /* background:rgb(146, 146, 255); */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
 }
 #section4 .locationMap a {
+  width: 110px;
+  height: 110px;
+  background: #1e3a8b;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+#section4 .locationMap a i {
+  margin-bottom: 10px;
+}
+#section4 .locationMap a:hover {
+  background: #583cf2;
 }
 #section4 .locationMap > div {
+  width: 990px;
+  height: 550px;
+  background: url(./images/860.png) no-repeat center center / cover;
+  text-indent: -9999px;
+  position:relative;
 }
-
+#section4 .locationMap > div:after{
+  
+}
 /*-------------footer----------------*/
 #footerWrap {
   width: 100%;
