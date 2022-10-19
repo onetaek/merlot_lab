@@ -495,13 +495,182 @@ main {
 #section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 p {
 }
 /*-------------section2----------------*/
-#section2 {
-  width: 100%;
-  height: 1005px;
-  background: rgb(255, 236, 201);
+#section2{width: 100%;height: 1005px;
+  padding-bottom:220px;
+  /* background:rgb(179, 255, 179); */
+  position:relative;
 }
+#section2 .section2Title{width:100%;
+  background:url(./images/main_technology_bg.jpg) no-repeat #171d3d bottom 140px right;
+margin:0 auto;height: 500px;padding-top:100px;}
+#section2 .section2Title .section2Text {padding:0 20px;
+  
+}
+#section2 .section2Title .section2Text > div{
+  width:1340px;display:flex;flex-direction: column-reverse;
+  justify-content: flex-end;
+  margin:0 auto;height:300px; 
+  /* background:pink; */
+}
+#section2 .section2Title .section2Text h2{font-size: 50px;
+  font-weight: 700;text-transform: uppercase;color:#fff;
+  line-height: 1;margin-top: 10px;}
+#section2 .section2Title .section2Text p{font-size: 18px;
+  color: #babbbe;}
+#section2 .section2Bottom{width:1340px;height: 460px;
+  margin:-175px auto 0;
+  /* background:rgb(163, 163, 255); */
+  background-color: #fff;
+
+  position:relative;
+}
+#section2 .section2Bottom::after{
+  content:"";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(163, 163, 255); */
+    background-color: #fff;
+    z-index: 1;
+}  
+#section2 .section2Bottom .contentWrap{
+  padding: 60px 20px 0 80px;
+  z-index: 100;
+  display:flex;
+  width:2000px;
+  position:relative;
+}
+#section2 .section2Bottom .contentWrap a{
+  width:450px;
+  height:404px;
+  padding:0 15px;
+  display:block;
+  /* background:rgb(255, 92, 119); */
+}
+#section2 .section2Bottom .contentWrap a .content{}
+#section2 .section2Bottom .contentWrap a .content .contentImg{
+  text-indent: -9999px;
+  width:420px;height: 275px;
+  margin-bottom: 20px;
+}
+#section2 .contentWrap .content1 { background-image: url(./images/main_technology_img1.jpg) ; }
+#section2 .contentWrap .content2 { background-image: url(./images/main_technology_img2.jpg) ; }
+#section2 .contentWrap .content3 { background-image: url(./images/main_technology_img3.jpg) ; }
+#section2 .contentWrap .content4 { background-image: url(./images/main_technology_img4.jpg) ; }
+#section2 .contentWrap .content5 { background-image: url(./images/main_technology_img5.jpg) ; }
+#section2 .section2Bottom .contentWrap a .content .techCont{
+}
+#section2 .section2Bottom .contentWrap a .content .techCont h3{    font-size: 24px;
+  font-weight: 700;
+
+}
+#section2 .section2Bottom .contentWrap a .content .techCont h3 span{
+  font-size: 15px;
+  font-weight: 700;
+  color: #583cf2;
+  margin-right:20px;
+}
+#section2 .section2Bottom .contentWrap a .content .techCont p{
+  margin-top: 15px;
+    font-size: 16px;
+    color: #5d5d5d;
+    margin-left:45px;
+}
+#section2 .section2Bottom #section2TitleBtn{
+  /* background:red;
+  position:absolute; top:0; left:0; */
+}
+#section2 .section2Bottom #section2TitleBtn button{
+  
+}
+#section2 .section2Bottom #section2TitleBtn button.left{
+
+}
+#section2 .section2Bottom #section2TitleBtn button.right{
+
+}
+#section2 .section2Bottom #section2WrapBtn {
+  /* background:red; */
+  text-align: center;
+}
+#section2 .section2Bottom #section2WrapBtn button{
+  position:relative;
+  top:30px;
+  width: 12px;
+    height: 12px;
+text-indent: -9999px;
+position:relative;
+margin:0 4px;
+}
+#section2 .section2Bottom #section2WrapBtn button::before{
+
+  content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    opacity: .25;
+    background-color: #583cf2;
+    border-radius: 50%;
+}
+#section2 .section2Bottom #section2WrapBtn button.one{}
+#section2 .section2Bottom #section2WrapBtn button.two{}
+#section2 .section2Bottom #section2WrapBtn button.three{}
+#section2 .section2Bottom #section2WrapBtn button.four{}
+#section2 .section2Bottom #section2WrapBtn button.five{}
+
+/* #section2 { 
+  width: 100%; height: 785px; 
+  margin: 0 auto; 
+  padding-bottom: 220px; 
+  background-color: cadetblue; }
+.section2Title { 
+      width: 100%; height: 500px; 
+      background: url(./images/main_technology_bg.jpg)no-repeat center/100% 500px;
+      background: rgb(201, 142, 108);
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column-reverse; }
+.section2Title h2 { color: #fff; font-size: 36px; 
+         width: 1360px; height: 150px;        
+         text-transform: uppercase;
+         left: 50px;
+         position: absolute; left: 100px;}
+.section2Title p { color: #fff; width: 725px; height: 24px; 
+width: 1340px;}
+
+/* ----테크놀로지 파트 이미지 슬라이드 ----*/
+
+/* #section2 .contentWrap { position: absolute; left: 150px; top: -150px;
+              width: 1340px; height: 460px;
+              background-color: olive;
+              display: flex;
+              align-items: center;}
+#section2 .contentWrap .content { width: 450px; height: 404px; margin : 30px 15px;
+                     background-color: skyblue;
+                     background: no-repeat center / 440px 270px;
+                     display: flex;
+                     flex-direction: column-reverse;
+                     align-items: center;
+                     transition: 0.5s;
+                     overflow: hidden;
+                      }
+
+.con .content1 { background-image: url(../images/main_technology_img1.jpg) ; }
+#section2 .contentWrap .content2 { background-image: url(../images/main_technology_img2.jpg) ; }
+#section2 .contentWrap .content3 { background-image: url(../images/main_technology_img3.jpg) ; }
+#section2 .contentWrap .content4 { background-image: url(../images/main_technology_img4.jpg) ; }
+#section2 .contentWrap .content5 { background-image: url(../images/main_technology_img5.jpg) ; }
+
+.cont:hover { transform: scale(1.2); }
+
+.cont .techContent { padding-top: 10px; } */ */
 /*-------------section3----------------*/
 #section3 {
+  display:none;
   width: 100%;
   height: 770px;
   padding: 120px 0 230px;
