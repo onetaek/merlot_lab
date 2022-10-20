@@ -501,6 +501,7 @@ main {
   padding-bottom: 220px;
   /* background:rgb(179, 255, 179); */
   position: relative;
+  overflow:hidden;
 }
 #section2 .section2Title {
   width: 100%;
