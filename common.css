@@ -79,12 +79,18 @@ button {
   background-size: 100% auto;
 }
 #header #gnb {
+  width: 100%;
+  max-width: 1020px;
 }
 #header #gnb #gnbList {
   display: flex;
+  justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 #header #gnb #gnbList > li {
-  width: 204px;
+  width: 20%;
   height: 80px;
   text-align: center;
   transition: 0.3s;
@@ -138,41 +144,104 @@ button {
 #header #gnb #gnbList > li > ul > li > a:hover {
   color: #fff;
 }
+
 #header .mobile-open{
-  display: none;
-  position: relative;
+  display:none;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+:root{
+  --toggle-background: #fff;
+  --toggle-beforetop: -10px;
+  --toggle-aftertop: 10px;
+  --toggle-beforeDegree: 0deg;
+  --toggle-afterDegree: 0deg;
+}
+
+#header .mobile-open span{
+  display: block;
   width: 30px;
   height: 2px;
   background-color: #fff;
   transition: background-color .3s;
+  position:relative;
 }
-#header .mobile-open::before{
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  transition: background-color .3s, transform .3s;
-}
-#header .mobile-open::after{
+#header .mobile-open span::before{
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
   height: 2px;
+  background-color: var(--toggle-background);
+  transition: background-color .3s, transform .3s;
+  transform:rotate(var(--toggle-beforeDegree));
+  top: var(--toggle-beforetop);
+}
+#header .mobile-open span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
   background-color: #fff;
   transition: background-color .3s, transform .3s;
-  bottom: -10px;
+  top: var(--toggle-aftertop);
 }
+/*mobile-menu*/
 .mobile-menu{
-  
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 1;
+  transform: translateX(100%);
+  background-color: #fff;
+  transition: visibility .3s, opacity .3s, transform .3s;
+  z-index: 1600;
+}
+.mobile-menu > #mobile-gnb{
+
+}
+.mobile-menu > #mobile-gnb > li{
+
+}
+.mobile-menu > #mobile-gnb > li >a{
+  width: 100%;
+  display: block;
+  padding: 19px 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+  transition: .3s;
+}
+.mobile-menu > #mobile-gnb > li >.snb{
+  display: none;
+  background:#f8f8f8;
+  padding: 20px 40px;
+  transition: all .3s;
+
+}
+.mobile-menu > #mobile-gnb > li >.snb.mobile_gnb_click{
+  display: block;
+  transition: .3s;
+
+}
+.mobile-menu > #mobile-gnb > li >.snb >li{
+  padding: 10px 0;
+}
+.mobile-menu .mobile-menu > li >.snb >li >a{
+  font-size: 18px;
+    color: #555;
 }
 /*headermedia*/
 @media (max-width: 1460px){}
 #header {
-    max-width: 1340px;
+    /* max-width: 1340px; */
     padding: 0 20px;
 }
 @media (max-width: 1280px){
@@ -181,22 +250,58 @@ button {
   }
 }
 @media (max-width: 970px){
+
+  #headerWrap{
+    /*클릭시 바귀어야할 값*/
+    /* background-color:#fff; */
+    /* box-shadow: 10px 0 15px rgb(0 0 0 / 10%); */
+    /* height:70px; */
+    position: fixed;
+    z-index: 16000;
+  }
+  #headerWrap.mobile_open_click{
+    background-color:#fff; 
+    box-shadow: 10px 0 15px rgb(0 0 0 / 10%);
+    height:70px;
+  }
+  #headerWrap #header #logo{}
+  #headerWrap #header #logo a.mobile_open_click{
+    /*클릭하면 바뀌어야할 배경이미지*/
+    background-image:url(./images/logo_black.png);
+  }
   #headerWrap #header #gnb{
     display:none;
   }
   #headerWrap .mobile-open{
     display:flex;
   }
+  #headerWrap #header .mobile-open span.mobile_open_click{
+    background-color: transparent;
+  }
+  
+  #headerWrap #header .mobile-open span::before{
+    /* 
+    background-color: #583cf2;
+    top: 50%;
+    bottom: auto;
+    transform: rotate(45deg); 
+    */
+  }
+  #headerWrap #header .mobile-open span::after{
+    /* 
+    background-color: #583cf2; 
+    top: 50%;
+    bottom: auto;
+    transform: rotate(-45deg);
+    */
+  }
   .mobile-menu{
-    display:flex;
-    position:fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    transition: visibility .3s, opacity .3s, transform .3s;
-    z-index: 1600;
+    visibility:hidden;
+    /*mobile-open클릭하면 visble*/
+  }
+  .mobile_open_click{
+    visibility: visible;
+    transform:translateX(0%);
   }
 }
 
