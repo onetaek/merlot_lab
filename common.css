@@ -65,7 +65,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100%;
+  transition: max-width .3s;
 }
 #header #logo {
 }
@@ -137,7 +138,67 @@ button {
 #header #gnb #gnbList > li > ul > li > a:hover {
   color: #fff;
 }
+#header .mobile-open{
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color .3s;
+}
+#header .mobile-open::before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color .3s, transform .3s;
+}
+#header .mobile-open::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color .3s, transform .3s;
+  bottom: -10px;
+}
+.mobile-menu{
+  
+}
 /*headermedia*/
+@media (max-width: 1460px){}
+#header {
+    max-width: 1340px;
+    padding: 0 20px;
+}
+@media (max-width: 1280px){
+  #header {
+    height: 80px;
+  }
+}
+@media (max-width: 970px){
+  #headerWrap #header #gnb{
+    display:none;
+  }
+  #headerWrap .mobile-open{
+    display:flex;
+  }
+  .mobile-menu{
+    display:flex;
+    position:fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: visibility .3s, opacity .3s, transform .3s;
+    z-index: 1600;
+  }
+}
 
 /*------------mainSlider----------------*/
 #mainSlider {
