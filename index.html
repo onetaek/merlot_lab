@@ -2,8 +2,12 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메를로랩 - 메를로랩</title>
     <script src="https://kit.fontawesome.com/91c8f2dd57.js" crossorigin="anonymous"></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
     <!-- https://merlotlab.com/ -->
     <link rel="stylesheet" href="./common.css" />
   </head>
@@ -60,9 +64,57 @@
             </li>
           </ul>
         </nav>
+        <a href="#" class="mobile-open"><span></span></a>
       </header>
     </div>
-
+    <!--mobile-menu-->
+    <div class="mobile-menu">
+      <ul id="mobile-gnb">
+        <li>
+          <a href="#">company</a>
+          <ul class="snb">
+            <li><a href="#">회사개요</a></li>
+            <li><a href="#">CEO 인사말</a></li>
+            <li><a href="#">CI 가이드</a></li>
+            <li><a href="#">오시는 길</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">business</a>
+          <ul class="snb">
+            <li><a href="#">빌딩 IoT</a></li>
+            <li><a href="#">홈 IoT</a></li>
+            <li><a href="#">에너지 사업</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">technology</a>
+          <ul class="snb">
+            <li><a href="#">메쉬 네트워크</a></li>
+            <li><a href="#">Dual-Stack 통신</a></li>
+            <li><a href="#">스마트 조명</a></li>
+            <li><a href="#">서비스 앱</a></li>
+            <li><a href="#">메를로랩 IoT</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">ir center</a>
+          <ul class="snb">
+            <li><a href="#">공시정보</a></li>
+            <li><a href="#">공고사항</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">cs center</a>
+          <ul class="snb">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">문의하기</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <!--------------silder----------------->
     <section id="mainSlider">
       <h2 class="hidden">메를로랩 회사 주요 내용 소개</h2>
@@ -174,16 +226,15 @@
               <h2>technology</h2>
               <p>메를로랩의 혁신적인 미래기술</p>
             </div>
-            
           </div>
-          
         </div>
         <div class="section2Bottom">
-          
           <div class="contentWrap">
-            <a href="#">
+            <a href="#" class="techLink1">
               <div class= "content">
-                <div class="contentImg content1">01 메쉬 네트워크 이미지</div>
+                <div class="contentImgWrap">
+                  <div class="contentImg content1">01 메쉬 네트워크 이미지</div>
+                </div> 
                 <div class="techCont">
                   <h3><span>/01</span> 메쉬 네트워크</h3>
                   <p>
@@ -193,9 +244,11 @@
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="techLink2">
               <div class= "content">
-                <div class="contentImg content2">02 Dual-Stack통신 이미지</div>
+                <div class="contentImgWrap">
+                  <div class="contentImg content2">02 Dual-Stack통신 이미지</div>
+                </div>  
                 <div class="techCont">
                   <h3><span>/02</span> Dual-Stack통신</h3>
                   <p>
@@ -205,9 +258,11 @@
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="techLink3">
               <div class= "content">
-                <div class="contentImg content3">03 스마트 조명 이미지</div>
+                <div class="contentImgWrap">
+                  <div class="contentImg content3">03 스마트 조명 이미지</div>
+                </div>
                 <div class="techCont">
                   <h3><span>/03</span> 스마트 조명</h3>
                   <p>
@@ -217,9 +272,11 @@
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="techLink4">
               <div class= "content">
-                <div class="contentImg content4">04 메를로랩 IoT 이미지</div>
+                <div class="contentImgWrap">
+                  <div class="contentImg content4">04 메를로랩 IoT 이미지</div>
+                </div>
                 <div class="techCont">
                   <h3><span>/04</span> 메를로랩 IoT</h3>
                   <p>
@@ -229,9 +286,11 @@
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="techLink5">
               <div class= "content">
-                <div class="contentImg content5">05 서비스 앱 이미지</div>
+                <div class="contentImgWrap">
+                  <div class="contentImg content5">05 서비스 앱 이미지</div>
+                </div>
                 <div class="techCont">
                   <h3><span>/05</span> 서비스 앱</h3>
                   <p>
@@ -243,8 +302,8 @@
             </a>
           </div>
           <div id="section2TitleBtn">
-            <button class="left"></button>
-            <button class="right"></button>
+            <button class="left">왼쪽으로 이동</button>
+            <button class="right">오른쪽으로 이동</button>
           </div>
           <div id="section2WrapBtn">
             <button class="one">1</button>
@@ -410,6 +469,5 @@
         </div>
       </footer>
     </div>
-    <script src="./app.js"></script>
   </body>
 </html>

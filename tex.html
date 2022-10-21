@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        a{display:block;
-        width:200px;height: 200px;background:red;}
-        div{
-            color:black;
+        p{
+            border:1px solid black;
+            position:relative;
+        }
+        :root {
+            --one-background: red;
+        }
+        p::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:10px;
+            height:10px;
+            background:var(--one-background);
         }
     </style>
 </head>
 <body>
-    <i class="fa-regular fa-clock-nine"></i>
+    <p>테스트</p>
+    <script>
+        let p = document.querySelector('p');
+        
+        let test = ()=>{
+            p.classList.toggle('bad')
+            console.log(p.classList.contains('bad'));
+            if(p.classList.contains('bad')){
+                document.documentElement.style.setProperty('--one-background','#583cf2');
+            }else{
+                document.documentElement.style.setProperty('--one-background','red');
+
+            }
+        }
+
+        p.addEventListener('click',function(){
+            test();
+        })
+    </script>
 </body>
 </html>

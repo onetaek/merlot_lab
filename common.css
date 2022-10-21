@@ -65,7 +65,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100%;
+  transition: max-width .3s;
 }
 #header #logo {
 }
@@ -78,12 +79,18 @@ button {
   background-size: 100% auto;
 }
 #header #gnb {
+  width: 100%;
+  max-width: 1020px;
 }
 #header #gnb #gnbList {
   display: flex;
+  justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 #header #gnb #gnbList > li {
-  width: 204px;
+  width: 20%;
   height: 80px;
   text-align: center;
   transition: 0.3s;
@@ -137,7 +144,166 @@ button {
 #header #gnb #gnbList > li > ul > li > a:hover {
   color: #fff;
 }
+
+#header .mobile-open{
+  display:none;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+:root{
+  --toggle-background: #fff;
+  --toggle-beforetop: -10px;
+  --toggle-aftertop: 10px;
+  --toggle-beforeDegree: 0deg;
+  --toggle-afterDegree: 0deg;
+}
+
+#header .mobile-open span{
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color .3s;
+  position:relative;
+}
+#header .mobile-open span::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--toggle-background);
+  transition: background-color .3s, transform .3s;
+  transform:rotate(var(--toggle-beforeDegree));
+  top: var(--toggle-beforetop);
+}
+#header .mobile-open span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color .3s, transform .3s;
+  top: var(--toggle-aftertop);
+}
+/*mobile-menu*/
+.mobile-menu{
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 1;
+  transform: translateX(100%);
+  background-color: #fff;
+  transition: visibility .3s, opacity .3s, transform .3s;
+  z-index: 1600;
+}
+.mobile-menu > #mobile-gnb{
+
+}
+.mobile-menu > #mobile-gnb > li{
+
+}
+.mobile-menu > #mobile-gnb > li >a{
+  width: 100%;
+  display: block;
+  padding: 19px 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+  transition: .3s;
+}
+.mobile-menu > #mobile-gnb > li >.snb{
+  display: none;
+  background:#f8f8f8;
+  padding: 20px 40px;
+  transition: all .3s;
+
+}
+.mobile-menu > #mobile-gnb > li >.snb.mobile_gnb_click{
+  display: block;
+  transition: .3s;
+
+}
+.mobile-menu > #mobile-gnb > li >.snb >li{
+  padding: 10px 0;
+}
+.mobile-menu .mobile-menu > li >.snb >li >a{
+  font-size: 18px;
+    color: #555;
+}
 /*headermedia*/
+@media (max-width: 1460px){}
+#header {
+    /* max-width: 1340px; */
+    padding: 0 20px;
+}
+@media (max-width: 1280px){
+  #header {
+    height: 80px;
+  }
+}
+@media (max-width: 970px){
+
+  #headerWrap{
+    /*클릭시 바귀어야할 값*/
+    /* background-color:#fff; */
+    /* box-shadow: 10px 0 15px rgb(0 0 0 / 10%); */
+    /* height:70px; */
+    position: fixed;
+    z-index: 16000;
+  }
+  #headerWrap.mobile_open_click{
+    background-color:#fff; 
+    box-shadow: 10px 0 15px rgb(0 0 0 / 10%);
+    height:70px;
+  }
+  #headerWrap #header #logo{}
+  #headerWrap #header #logo a.mobile_open_click{
+    /*클릭하면 바뀌어야할 배경이미지*/
+    background-image:url(./images/logo_black.png);
+  }
+  #headerWrap #header #gnb{
+    display:none;
+  }
+  #headerWrap .mobile-open{
+    display:flex;
+  }
+  #headerWrap #header .mobile-open span.mobile_open_click{
+    background-color: transparent;
+  }
+  
+  #headerWrap #header .mobile-open span::before{
+    /* 
+    background-color: #583cf2;
+    top: 50%;
+    bottom: auto;
+    transform: rotate(45deg); 
+    */
+  }
+  #headerWrap #header .mobile-open span::after{
+    /* 
+    background-color: #583cf2; 
+    top: 50%;
+    bottom: auto;
+    transform: rotate(-45deg);
+    */
+  }
+  .mobile-menu{
+    visibility:hidden;
+    /*mobile-open클릭하면 visble*/
+  }
+  .mobile_open_click{
+    visibility: visible;
+    transform:translateX(0%);
+  }
+}
 
 /*------------mainSlider----------------*/
 #mainSlider {
@@ -513,16 +679,15 @@ main {
   height: 500px;
   padding-top: 100px;
 }
-#section2 .section2Title .section2Text {
-  padding: 0 20px;
-}
+#section2 .section2Title .section2Text { }
 #section2 .section2Title .section2Text > div {
   width: 1340px;
   display: flex;
+  padding: 0 20px;
   flex-direction: column-reverse;
   justify-content: flex-end;
   margin: 0 auto;
-  height: 300px;
+  height: 147.8px;
   /* background:pink; */
 }
 #section2 .section2Title .section2Text h2 {
@@ -532,7 +697,7 @@ main {
   color: #fff;
   line-height: 1;
   margin-top: 10px;
-}
+  }
 #section2 .section2Title .section2Text p {
   font-size: 18px;
   color: #babbbe;
@@ -543,7 +708,6 @@ main {
   margin: -175px auto 0;
   /* background:rgb(163, 163, 255); */
   background-color: #fff;
-
   position: relative;
 }
 #section2 .section2Bottom::after {
@@ -572,14 +736,36 @@ main {
   display: block;
   /* background:rgb(255, 92, 119); */
 }
+#section2 .section2Bottom .contentWrap .techLink1:hover .content1 { 
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink2:hover .content2 { 
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink3:hover .content3 { 
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink4:hover .content4 { 
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink5:hover .content5 { 
+  transform: scale(1.1);
+}
 #section2 .section2Bottom .contentWrap a .content {
 }
-#section2 .section2Bottom .contentWrap a .content .contentImg {
-  text-indent: -9999px;
+#section2 .section2Bottom .contentWrap a .content .contentImgWrap {
   width: 420px;
   height: 275px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
+#section2 .section2Bottom .contentWrap a .content .contentImg {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  text-indent: -9999px;
+}
+
 #section2 .contentWrap .content1 {
   background-image: url(./images/main_technology_img1.jpg);
 }
@@ -614,14 +800,39 @@ main {
   margin-left: 45px;
 }
 #section2 .section2Bottom #section2TitleBtn {
-  /* background:red;
-  position:absolute; top:0; left:0; */
+  /* background:red; */
+  position:relative; bottom:564px; left:25px;
+  width: 500px;
+  height: 30px;
 }
 #section2 .section2Bottom #section2TitleBtn button {
+  /* background: brown; */
+  width: 10px;
+  height: 20px;
+  text-indent: -9999px;
+  position: absolute;
+  background: no-repeat center center;
 }
 #section2 .section2Bottom #section2TitleBtn button.left {
+  left: 5px;
+  /* background: purple; */
+  background-image: url(./images/button_left_white.png);
+  background-size: cover;
 }
+#section2 .section2Bottom #section2TitleBtn button.left::after {
+  content : "";
+  position : absolute;
+  left : 2rem;
+  top : 0.3em;
+  height : 15px;
+  border-left: 1px solid #363f66;
+}
+
 #section2 .section2Bottom #section2TitleBtn button.right {
+  left: 60px;
+  /* background: olive; */
+  background-image: url(./images/button_right_white.png);
+  background-size: cover; 
 }
 #section2 .section2Bottom #section2WrapBtn {
   /* background:red; */
@@ -656,6 +867,36 @@ main {
 #section2 .section2Bottom #section2WrapBtn button.four {
 }
 #section2 .section2Bottom #section2WrapBtn button.five {
+}
+@media (max-width: 1440px) {
+  #section2 .section2Title{ 
+    background-position: bottom right;
+    height: 380px; }
+}
+
+@media all and (max-width: 1280px){
+  #section2 .section2Bottom { margin: 0 auto; }
+}
+
+@media all and (max-width: 1280px){
+  #section2 .section2Title .section2Text h2 { font-size : 38px ; }
+  #section2 .section2Title .section2Text p { font-size: 17px ; }
+}
+@media all and (max-width: 970px){
+  #section2 .section2Title{ 
+    background-size: auto 100%; 
+    height: 300px;
+  }
+  #section2 .section2Title .section2Text h2 { font-size : 36px ; }
+  #section2 .section2Title .section2Text p { font-size: 16px ; }
+  #section2 .section2Bottom .contentWrap a .content .techCont p {
+    margin-top: 10px;
+    font-size: 15px;
+    }
+}
+@media all and (max-width: 640px){
+  #section2 .section2Title { height: 220px; }
+  #section2 .section2Title .section2Text h2 { font-size : 30px ; }
 }
 /* -------------section3----------------
 #section3 {
