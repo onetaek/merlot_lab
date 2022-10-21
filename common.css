@@ -1072,7 +1072,7 @@ main {
   height: 420px;
   background: url(./images/main_ir_img1.jpg) no-repeat top center/cover;
 }
-#section3 > div .section3Title > section { position: absolute;}
+
 #section3 > div .section3Title a {
   display: block;
   height: 100%;
@@ -1115,20 +1115,23 @@ main {
 #section3 > div .contentWrap {
   width: 870px;
   height: 420px;
+  position:relative;
 }
 #section3 > div .contentWrap > section {
-  position: absolute; position: relative;
+  position: absolute; 
+  top:0;
+  left:0;
 }
 #section3 > div .contentWrap > .news {
   /* display: none; */
   position: relative;
 }
 #section3 > div .contentWrap > .notice ul {
-  display: none;
-  position: absolute;
+  /* display: none; */
 }
 #section3 > div .contentWrap > .notice {
-  
+  width:870px;
+  height: 393px;
 }
 #section3 > div .contentWrap > section h3 {
   font-size: 100%;
@@ -1205,6 +1208,10 @@ box-sizing: border-box;*/
 }
 #section3 > div .contentWrap > section > ul li a div p:last-of-type i{
   position: relative;
+  margin-right: 2px;
+}
+#section3 > div .contentWrap > section > ul li a div p:last-of-type time{
+  transform:translateY(-2.5px);
 }
 #section3 > div .contentWrap > section > ul li a > div p {
   display: flex;
