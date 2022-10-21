@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메를로랩 - 메를로랩</title>
     <script src="https://kit.fontawesome.com/91c8f2dd57.js" crossorigin="anonymous"></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
     <!-- https://merlotlab.com/ -->
     <link rel="stylesheet" href="./common.css" />
   </head>
@@ -62,11 +64,56 @@
             </li>
           </ul>
         </nav>
-        <a href="#" class="mobile-open"></a>
+        <a href="#" class="mobile-open"><span></span></a>
       </header>
     </div>
+    <!--mobile-menu-->
     <div class="mobile-menu">
-     
+      <ul id="mobile-gnb">
+        <li>
+          <a href="#">company</a>
+          <ul class="snb">
+            <li><a href="#">회사개요</a></li>
+            <li><a href="#">CEO 인사말</a></li>
+            <li><a href="#">CI 가이드</a></li>
+            <li><a href="#">오시는 길</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">business</a>
+          <ul class="snb">
+            <li><a href="#">빌딩 IoT</a></li>
+            <li><a href="#">홈 IoT</a></li>
+            <li><a href="#">에너지 사업</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">technology</a>
+          <ul class="snb">
+            <li><a href="#">메쉬 네트워크</a></li>
+            <li><a href="#">Dual-Stack 통신</a></li>
+            <li><a href="#">스마트 조명</a></li>
+            <li><a href="#">서비스 앱</a></li>
+            <li><a href="#">메를로랩 IoT</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">ir center</a>
+          <ul class="snb">
+            <li><a href="#">공시정보</a></li>
+            <li><a href="#">공고사항</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">cs center</a>
+          <ul class="snb">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">문의하기</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <!--------------silder----------------->
     <section id="mainSlider">
@@ -412,6 +459,5 @@
         </div>
       </footer>
     </div>
-    <script src="./app.js"></script>
   </body>
 </html>
