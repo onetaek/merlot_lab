@@ -6,7 +6,6 @@
 }
 body {
   font-family: "Lato", "Noto Sans KR", sans-serif;
-  
 }
 body,
 h1,
@@ -237,8 +236,8 @@ button {
 }
 /*headermedia*/
 @media (max-width: 1460px) {
-  #header{
-    margin:0 20px;
+  #header {
+    margin: 0 20px;
   }
 }
 #header {
@@ -352,7 +351,7 @@ button {
 #mainSlider #mainSliderList {
   margin: 0 auto;
   max-width: 1340px;
-  width:100%;
+  width: 100%;
   height: 100%;
   padding: 0 20px 80px;
   position: relative;
@@ -386,7 +385,7 @@ button {
   width: 100%;
 }
 #mainSlider #mainSliderList #mainSliderWrap dl dt br.show640 {
-  display:none;
+  display: none;
 }
 #mainSlider #mainSliderList #mainSliderWrap dl dt span {
   color: #7251ff;
@@ -445,7 +444,6 @@ button {
 }
 #sliderBtnWrap #sliderBtn {
   display: flex;
-  
 }
 #sliderBtnWrap #sliderBtn {
   width: 740px;
@@ -501,65 +499,64 @@ button {
   )
 3. 640px 부터 글자들 줄바꿈, view moew 배경색 지움
 */
-@media (max-width: 1464px){
-  #mainSlider a{
-    position:relative;
-    left:-110px;
+@media (max-width: 1464px) {
+  #mainSlider a {
+    position: relative;
+    left: -110px;
   }
-  #mainSlider #mainSliderList{
-    
-  }
-}
-@media (max-width:1280px){
-  #mainSlider #mainSliderList #mainSliderWrap dl dt{
-    font-size:52px;
+  #mainSlider #mainSliderList {
   }
 }
-@media(max-width:970px){
+@media (max-width: 1280px) {
+  #mainSlider #mainSliderList #mainSliderWrap dl dt {
+    font-size: 52px;
+  }
+}
+@media (max-width: 970px) {
   #mainSlider {
-    height:800px;
+    height: 800px;
   }
-  #mainSlider #mainSliderList #mainSliderWrap dl dt{
+  #mainSlider #mainSliderList #mainSliderWrap dl dt {
     font-size: 48px;
   }
-  #sliderBtnWrap{
-    padding-left:20px;
+  #sliderBtnWrap {
+    padding-left: 20px;
   }
-  
-  #sliderBtnWrap #sliderBtn{
-    margin-bottom:30px;
+
+  #sliderBtnWrap #sliderBtn {
+    margin-bottom: 30px;
   }
-  #sliderBtnWrap #sliderBtn li button{
-    display:flex;
+  #sliderBtnWrap #sliderBtn li button {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 }
-@media(max-width: 770px){
-  #mainSlider #mainSliderList #mainSliderWrap dl dt{
-    font-size:34px;
+@media (max-width: 770px) {
+  #mainSlider #mainSliderList #mainSliderWrap dl dt {
+    font-size: 34px;
   }
-  #sliderBtnWrap{
-    width:100%;
-    left:20px;
-    padding:0;
+  #sliderBtnWrap {
+    width: 100%;
+    left: 20px;
+    padding: 0;
   }
-  #sliderBtnWrap #sliderBtn{
+  #sliderBtnWrap #sliderBtn {
     flex-direction: column;
   }
-  #sliderBtnWrap #sliderBtn li button{
+  #sliderBtnWrap #sliderBtn li button {
     flex-direction: row;
-    font-size:13px;
+    font-size: 13px;
   }
-  #sliderBtnWrap #sliderBtn >li{
+  #sliderBtnWrap #sliderBtn > li {
     flex-direction: row;
     min-width: 210px;
     font-size: 14px;
   }
 }
-@media(max-width: 640px){
-  #mainSlider #mainSliderList #mainSliderWrap dl dt br.show640{
-    display:block;
+@media (max-width: 640px) {
+  #mainSlider #mainSliderList #mainSliderWrap dl dt br.show640 {
+    display: block;
   }
 }
 /*-----------------------main-------------------*/
@@ -917,7 +914,6 @@ main {
 #section2 .section2Bottom #section2WrapBtn {
   /* background:red; */
   text-align: center;
-  
 }
 #section2 .section2Bottom #section2WrapBtn button {
   position: relative;
@@ -949,8 +945,7 @@ main {
 }
 #section2 .section2Bottom #section2WrapBtn button.five {
 }
-@media (min-width:1441px){
-  
+@media (min-width: 1441px) {
 }
 @media (max-width: 1440px) {
   #section2 .section2Title {
@@ -972,10 +967,9 @@ main {
   #section2 .section2Title .section2Text p {
     font-size: 17px;
   }
-
 }
-@media all and (min-width:971px){
-  #section2WrapBtn{
+@media all and (min-width: 971px) {
+  #section2WrapBtn {
     display: none;
   }
 }
@@ -1071,12 +1065,12 @@ main {
 #section3 > div .contentWrap {
   width: 870px;
   height: 420px;
-  position:relative;
+  position: relative;
 }
 #section3 > div .contentWrap > section {
-  position: absolute; 
-  top:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #section3 > div .contentWrap > .news {
   /* display: none; */
@@ -1086,15 +1080,15 @@ main {
   /* display: none; */
 }
 #section3 > div .contentWrap > .notice {
-  width:870px;
+  width: 870px;
   height: 393px;
 }
 #section3 > div .contentWrap > section h3 {
   font-size: 100%;
   color: #777;
   display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
   /* z-index: 50; font-size: 100%;
 border: 0;
 vertical-align: baseline;     padding: 0;
@@ -1162,12 +1156,12 @@ box-sizing: border-box;*/
   font-size: 14px;
   color: #888;
 }
-#section3 > div .contentWrap > section > ul li a div p:last-of-type i{
+#section3 > div .contentWrap > section > ul li a div p:last-of-type i {
   position: relative;
   margin-right: 2px;
 }
-#section3 > div .contentWrap > section > ul li a div p:last-of-type time{
-  transform:translateY(-2.5px);
+#section3 > div .contentWrap > section > ul li a div p:last-of-type time {
+  transform: translateY(-2.5px);
 }
 #section3 > div .contentWrap > section > ul li a > div p {
   display: flex;
@@ -1182,8 +1176,8 @@ box-sizing: border-box;*/
   right: 35px;
   text-transform: uppercase;
   display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 #section3 > div .contentWrap > section > a::after {
   content: "+";
@@ -1203,7 +1197,7 @@ box-sizing: border-box;*/
 /*section3media*/
 @media screen and (min-width: 1280px) {
 }
-@media screen and (max-width: 1279px) {
+/* @media screen and (max-width: 1279px) {
   #section3 > div {
     flex-direction: column;
     width: 100%;
