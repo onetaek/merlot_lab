@@ -17,6 +17,7 @@ let toggle_mobile_menu = () => {
         document.documentElement.style.setProperty('--toggle-background','#583cf2');
         document.documentElement.style.setProperty('--toggle-beforetop','50%');
         document.documentElement.style.setProperty('--toggle-aftertop','50%');
+        console.log('적용중간')
         document.documentElement.style.setProperty('--toggle-beforeDegree','rotate(45deg)');
         document.documentElement.style.setProperty('--toggle-afterDegree','rotate(-45deg)');
     }else{
