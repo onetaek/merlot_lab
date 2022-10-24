@@ -752,6 +752,7 @@ main {
   margin: 0 auto;
   height: 500px;
   padding-top: 100px;
+  transition: 1s;
 }
 #section2 .section2Title .section2Text {
 }
@@ -763,6 +764,7 @@ main {
   justify-content: flex-end;
   margin: 0 auto;
   height: 147.8px;
+  transition: 1s;
   /* background:pink; */
 }
 #section2 .section2Title .section2Text h2 {
@@ -772,18 +774,21 @@ main {
   color: #fff;
   line-height: 1;
   margin-top: 10px;
+  transition: 1s;
 }
 #section2 .section2Title .section2Text p {
   font-size: 18px;
   color: #babbbe;
+  transition: 1s;
 }
 #section2 .section2Bottom {
   width: 1340px;
   height: 460px;
-  margin: -175px auto 0;
+  margin: -180px auto 0;
   /* background:rgb(163, 163, 255); */
   background-color: #fff;
   position: relative;
+  transition: 1s;
 }
 #section2 .section2Bottom::after {
   content: "";
@@ -803,6 +808,7 @@ main {
   display: flex;
   width: 2000px;
   position: relative;
+  transition: 1s;
 }
 #section2 .section2Bottom .contentWrap a {
   width: 450px;
@@ -899,10 +905,10 @@ main {
 #section2 .section2Bottom #section2TitleBtn button.left::after {
   content: "";
   position: absolute;
-  left: 2rem;
-  top: 0.3em;
+  left: 33px;
+  top: 3px;
   height: 15px;
-  border-left: 1px solid #363f66;
+  border-left: 1px solid #adadad;
 }
 
 #section2 .section2Bottom #section2TitleBtn button.right {
@@ -946,21 +952,44 @@ main {
 #section2 .section2Bottom #section2WrapBtn button.five {
 }
 @media (min-width: 1441px) {
+  #section2 .section2Bottom{
+    width: 100%;
+  }
+  #section2 .section2Bottom .contentWrap a {
+    width: 100%; height: 100%;
+  }
 }
 @media (max-width: 1440px) {
   #section2 .section2Title {
     background-position: bottom right;
     height: 380px;
   }
-}
-
-@media all and (max-width: 1280px) {
+  #section2 .section2Bottom{
+    width: 1440px; overflow: hidden;
+  }
+  #section2 .section2Bottom .contentWrap a {
+    width: 80%; height: 80%;
+  }
+  #section2 .section2Bottom .contentWrap {
+    padding: 40px 10px 0;
+  }
+  #section2WrapBtn {
+    display: block;
+  }
+  #section2 .section2Bottom #section2TitleBtn {
+  bottom: 600px; }
   #section2 .section2Bottom {
     margin: 0 auto;
   }
 }
+@media all and (max-width: 1280px) {
+  #section2 .section2Bottom {
+  }
+}
 
 @media all and (max-width: 1280px) {
+  #section2 .section2Title {
+    background-size: auto 100%;}
   #section2 .section2Title .section2Text h2 {
     font-size: 38px;
   }
@@ -969,6 +998,8 @@ main {
   }
 }
 @media all and (min-width: 971px) {
+  #section2 .section2Title {
+    background-size: auto 100%;}
   #section2WrapBtn {
     display: none;
   }
@@ -978,6 +1009,7 @@ main {
     background-size: auto 100%;
     height: 300px;
   }
+  #section2 .section2Title .section2Text > div { height: 90px; }
   #section2 .section2Title .section2Text h2 {
     font-size: 36px;
   }
@@ -988,16 +1020,24 @@ main {
     margin-top: 10px;
     font-size: 15px;
   }
-  #section2WrapBtn {
-    display: block;
+  #section2 .section2Bottom #section2TitleBtn {
+    bottom: 560px;
   }
 }
 @media all and (max-width: 640px) {
   #section2 .section2Title {
     height: 220px;
+    padding-top: 50px;
   }
+  #section2 .section2Title .section2Text > div { height: 70px; }
   #section2 .section2Title .section2Text h2 {
     font-size: 30px;
+  }
+  #section2 .section2Bottom #section2TitleBtn {
+    bottom: 540px;
+  }
+  #section2 .section2Bottom #section2TitleBtn button{
+    
   }
 }
 /*-------------------------section3----------------------------------------------*/
