@@ -1,0 +1,26 @@
+<section1>
+1280px 
+content 크기바뀜
+background::before 살짝 올라옴
+기존 background를 줄여서 그런듯?
+970px
+첫번째 content는 사라지고 두번째 content가 top 100%차지
+640px
+content3개가 세로정렬
+
+<section4>
+1440px
+카카오맵이미지와 왼쪽의 텍스트들이 세로정렬(text가 아래로감)
+1080px
+텍스트에 br이 추가됨
+970px
+텍스트끼리도 세로정렬
+640px
+카카오맵 이미지 작아짐
+
+<footer>
+970px
+왼쪽 오른쪽요소들이 세로정렬(nav는 그대로)
+640px
+nav가 아래로가서 버튼으로 바뀜(mobile용인듯?) 
+오른쪽 요소도 버튼으로 바뀜
