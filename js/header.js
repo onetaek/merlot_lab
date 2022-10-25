@@ -17,9 +17,9 @@ let toggle_mobile_menu = () => {
         document.documentElement.style.setProperty('--toggle-background','#583cf2');
         document.documentElement.style.setProperty('--toggle-beforetop','50%');
         document.documentElement.style.setProperty('--toggle-aftertop','50%');
-        console.log('적용중간')
-        document.documentElement.style.setProperty('--toggle-beforeDegree','rotate(45deg)');
-        document.documentElement.style.setProperty('--toggle-afterDegree','rotate(-45deg)');
+        // console.log('적용중간')
+        document.documentElement.style.setProperty('--toggle-beforeDegree','45deg');
+        document.documentElement.style.setProperty('--toggle-afterDegree','-45deg');
     }else{
         document.documentElement.style.setProperty('--toggle-background','#fff');
         document.documentElement.style.setProperty('--toggle-beforetop','-10px');
@@ -42,7 +42,7 @@ let toggle_snb = (i) =>{
     }
     if(state == false){
         mobile_snb[i].classList.add('mobile_gnb_click');
-    }    
+    }  
 }
 
 

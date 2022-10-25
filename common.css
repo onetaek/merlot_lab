@@ -186,7 +186,8 @@ button {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--toggle-background);
+  transform: rotate(var(--toggle-afterDegree));
   transition: background-color 0.3s, transform 0.3s;
   top: var(--toggle-aftertop);
 }
@@ -274,6 +275,8 @@ button {
   }
   #headerWrap .mobile-open {
     display: flex;
+    position:relative;
+    right:10px;
   }
   #headerWrap #header .mobile-open span.mobile_open_click {
     background-color: transparent;
