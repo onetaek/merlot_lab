@@ -49,6 +49,10 @@ button {
 .fas {
   font-weight: 900 !important;
 }
+#wrap{
+  width:100%;
+  overflow:hidden;
+}
 /* -----------------header------------------ */
 #headerWrap {
   width: 100%;
@@ -98,9 +102,6 @@ button {
 #header #gnb #gnbList > li:hover {
   background: #583cf2;
 }
-#header #gnb #gnbList > li:hover .snb {
-  opacity: 1;
-}
 #header #gnb #gnbList > li > a {
   color: #fff;
   height: 100%;
@@ -110,7 +111,19 @@ button {
   position: relative;
   display: block;
 }
-#header #gnb #gnbList > li > a:after {
+#header #gnb #gnbList > li > a:hover + .snb{
+  opacity: 1;
+  padding: 10px 0;
+
+}
+#header #gnb #gnbList > li > a:hover + .snb li{
+  height: 24px;
+  margin: 10px 0;
+}
+#header #gnb #gnbList > li > a:hover + .snb li a{
+  font-size: 16px;
+}
+#header #gnb #gnbList > li > a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -121,23 +134,30 @@ button {
   background-color: #8c72f7;
   transition: 0.3s;
 }
-#header #gnb #gnbList > li:hover > a:after {
+#header #gnb #gnbList > li:hover > a::after {
   width: 100px;
 }
 #header #gnb #gnbList > li > .snb {
+  
   width: 100%;
-  padding: 10px 0;
+  /* padding: 10px 0; */
+  padding:0;
   background: #583cf2;
   opacity: 0;
-  transition: 0.3s;
+  transition:.3s;
 }
 
 #header #gnb #gnbList > li > ul > li {
+  /* 
   height: 24px;
-  margin: 10px 0;
+  margin: 10px 0; 
+  */
+  height:0;
+  margin:0;
 }
 #header #gnb #gnbList > li > ul > li > a {
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size:0;
   color: #b3a1fb;
   transition: 0.3s;
 }
@@ -236,6 +256,7 @@ button {
   color: #555;
 }
 /*headermedia*/
+
 @media (max-width: 1460px) {
   #header {
     margin: 0 20px;
@@ -639,12 +660,13 @@ main {
   line-height: 50px;
 }
 #section1 .contentWrap .contentWrapTop .content2Wrap {
+  width: 840px;
+  height:621px;
   position: relative;
 }
 #section1 .contentWrap .contentWrapTop .content2Wrap > a {
   display: block;
   background: url(./images/main_business_img1.jpg) no-repeat top center;
-  width: 840px;
   height: 621px;
 }
 #section1 .contentWrap .contentWrapTop .content2Wrap > a > .content2 {
@@ -713,6 +735,7 @@ main {
 #section1 .contentWrap .contentWrapBottom .content4Wrap {
   padding-top: 130px;
   width: 550px;
+  margin-left:40px;
 }
 #section1 .contentWrap .contentWrapBottom .content4Wrap > a {
   display: block;
@@ -731,13 +754,72 @@ main {
   display: flex;
   flex-direction: column;
 }
-#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 h3 {
+/*section1media*/
+@media (max-width: 1280px) {
+  #section1 .contentWrap .contentWrapTop .content2Wrap{
+    width:45%;
+    height:55vw;
+  }
+  #section1 .contentWrap .contentWrapTop .content2Wrap > a > .content2{
+    width:80%;
+  }
 }
-#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 p {
-}
-#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 p {
-}
-#section1 .contentWrap .contentWrapBottom .content4Wrap > a .content4 p {
+@media (max-width: 970px) {
+  #section1{
+    padding-top:0;
+  }
+  #section1 .contentWrap .contentWrapTop{
+    height:auto;
+    flex-direction: column;
+  }
+  #section1 .contentWrap .contentWrapTop .content1{
+    
+    margin-bottom:50px;
+  }
+  #section1 .contentWrap .contentWrapTop .content1 h2{
+    font-size:48px;
+  }
+  #section1 .contentWrap .contentWrapTop .content1 p{
+    font-size:16px;
+  }
+  #section1 .contentWrap .contentWrapTop .content2Wrap{
+    width:100%;
+  }
+  #section1 .contentWrap .contentWrapTop .content2Wrap > a {
+    position:relative;
+    height:50vw;
+  }
+  #section1 .contentWrap .contentWrapTop .content2Wrap > a > .content2{
+    width:90%;
+    bottom:-80px;
+    padding:20px;
+  }
+  #section1 > div > div > div > a > .contentClick h3{
+    font-size:24px;
+    font-weight: 900;
+  }
+  .hide970{
+    display:none;
+  }
+  #section1 > div > div > div > a > .contentClick p:nth-of-type(1){
+    font-size:16px;
+  }
+  #section1 > div > div > div > a > .contentClick p:nth-of-type(2){
+    margin-top:15px;
+  }
+  #section1 > div > div > div > a > .contentClick p:last-of-type{
+    margin-top:20px;
+
+  }
+  @media (max-width: 640px) {
+    #section1{
+      height:auto;
+    }
+    #section1 .contentWrap .contentWrapBottom {
+      flex-direction:column;
+    }
+    
+  }
 }
 /*-----------------------------section2---------------------------------*/
 /* 상단 */
