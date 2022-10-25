@@ -1412,10 +1412,13 @@ box-sizing: border-box;*/
 }
 #section4 .locationMap > div:after {
 }
+/*section4media*/
+@media screen and (max-width:970px) {
+  
+}
 /*-------------footer----------------*/
 #footerWrap {
   width: 100%;
-  height: 316.5px;
   padding: 70px 0 80px;
   background-color: #242424;
 }
@@ -1445,7 +1448,7 @@ box-sizing: border-box;*/
 #footer #footerNav ul li {
   position: relative;
   padding-right: 9px;
-  margin-right: 8px;
+  margin-right: 8px;align-items: flex-start;
 }
 #footer #footerNav ul li:last-of-type {
   padding-right: 0px;
@@ -1471,6 +1474,7 @@ box-sizing: border-box;*/
   font-size: 14px;
   font-weight: 600;
   color: #5e5e5e;
+  text-transform: uppercase;
 }
 #footer .footerInfoWrap {
   display: flex;
@@ -1536,4 +1540,62 @@ box-sizing: border-box;*/
 }
 #footer .footerInfoWrap .goSite ul li:last-of-type > a:hover > i {
   background: url(./images/footer_icon2_ov.png) no-repeat center center;
+}
+/* footermedia */
+@media screen and (max-width:970px) {
+  #footer .footerInfoWrap{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #footer .footerInfoWrap .goSite{
+    margin-top:20px;
+  }
+}
+@media screen and (max-width:640px) {
+  #footer #footerNav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #footer #footerNav ul{
+    flex-wrap:wrap;
+    width:100%;
+    margin-top:15px;
+  }
+  #footer #footerNav ul li{
+    width:50%;
+    padding:5px;
+    margin:0;
+  }
+  #footer #footerNav ul li:last-of-type {
+    padding-right: 5px;
+    margin-right: 0px;
+  }
+  #footer #footerNav ul li::after{
+    content:"";
+    width:0px;
+    height:0px;
+  }
+  #footer #footerNav ul li > a{
+    border:1px solid #5e5e5e;
+    text-align: center;
+    line-height: 43px;
+  }
+  #footer .footerInfoWrap .goSite{
+    width:100%;
+  }
+  #footer .footerInfoWrap .goSite ul{
+  }
+  #footer .footerInfoWrap .goSite ul li{
+    width:50%;
+  }
+  #footer .footerInfoWrap .goSite ul li:last-of-type > a{
+    border-bottom:1px solid #5e5e5e;
+  }
+  #footer .footerInfoWrap .goSite ul li > a{
+    width:100%;
+    border:1px solid #5e5e5e;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+  }
 }
