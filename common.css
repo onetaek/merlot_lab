@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Lato", "Noto Sans KR", sans-serif;
+  position: relative;
 }
 body,
 h1,
@@ -881,17 +882,19 @@ main {
   overflow: hidden;
 }
 #section2 .section2Bottom .contentWrap {
-  width: 2000px;
-  padding: 60px 20px 0 60px;
-  z-index: 100;
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 68px;
+  left: 60px;
+  width: 137%;
+  height: 480px;
+  z-index: 100;
   transition: 1s;
 }
 #section2 .section2Bottom .contentWrap a {
   width: 450px;
   height: 400px;
-  padding: 0 15px;
+  padding: 0 17px;
   display: block;
   /* background:rgb(255, 92, 119); */
 }
@@ -957,11 +960,12 @@ main {
   font-size: 16px;
   color: #5d5d5d;
   margin-left: 45px;
+  word-break: keep-all;
 }
 /* 타이틀 아래 좌우버튼 */
 #section2 .section2Bottom #section2TitleBtn {
   position: absolute;
-  top: -100px; left: 25px;
+  top: -120px;
   width: 500px; height: 30px;
 }
 #section2 .section2Bottom #section2TitleBtn button {
@@ -974,6 +978,9 @@ main {
   left: 5px;
   background-image: url(./images/button_left_white.png);
   background-size: cover;
+}
+#section2 .section2Bottom #section2TitleBtn button.left:active .contentWrap {
+  transform: translateX(-20%);
 }
 #section2 .section2Bottom #section2TitleBtn button.left::after {
   content: "";
@@ -1012,17 +1019,10 @@ main {
   background-color: #583cf2;
   border-radius: 50%;
 }
-#section2WrapBtn button.one:before {
-  opacity: 0.7;
+#section2WrapBtn button:before {
+  opacity: 0.3;
 }
-#section2WrapBtn button.two {
-}
-#section2WrapBtn button.three {
-}
-#section2WrapBtn button.four {
-}
-#section2WrapBtn button.five {
-}
+
 @media (min-width: 1441px) {
   #section2 .section2Bottom .contentWrap a {width: 100%; height: 100%; }
   #section2WrapBtn { display: none; }
@@ -1030,9 +1030,12 @@ main {
 @media (max-width: 1440px) {
   #section2 .section2Title { background-position: bottom right;
                              height: 380px; }
-  #section2 .section2Bottom{ width: 1440px; }
+  #section2 .section2Bottom { height: auto; }
   #section2 .section2Bottom .contentWrap a { width: 80%; height: 80%; }
-  #section2 .section2Bottom .contentWrap { padding: 40px 10px 0; }
+  #section2 .section2Bottom .contentWrap { padding: 40px 10px 0;
+    position: relative;
+    top: 0; left: 0;
+    width: 100%; }
   #section2WrapBtn { display: none; }
   #section2 .section2Bottom { margin: 0 auto; }
 }
@@ -1042,6 +1045,7 @@ main {
   #section2 .section2Title .section2Text h2 { font-size: 38px; }
   #section2 .section2Title .section2Text p { font-size: 17px; }
   #section2 .section2Title { background-size: auto 100%; }
+
 }
 @media all and (max-width: 970px) {
   #section2 { padding-bottom: 100px }
@@ -1060,8 +1064,11 @@ main {
   #section2 .section2Title { height: 220px; padding-top: 50px; }
   #section2 .section2Title .section2Text > div { height: 70px; }
   #section2 .section2Title .section2Text h2 { font-size: 30px; }
+
+  #section2 .section2Bottom .contentWrap a { w: }
   #section2 .section2Bottom #section2TitleBtn { top: -80px; }
   #section2WrapBtn { display: block; }
+  #section2WrapBtn button:before:active  { opacity: 1;}
 }
 /*-------------------------section3----------------------------------------------*/
 #section3 {
