@@ -55,4 +55,11 @@ for( let i = 0 ; i < mobile_gnb.length; i++){
         toggle_snb(i);
     })
 }
-
+/*섹션3 보도자료 공지사항 */
+$(function(){
+    $("#contentWrap ul").not(":first").hide();
+    $("#contentWrap h3").on('click', function() {
+      $("#contentWrap section ul").hide();  
+      $(this).next().show();
+    })
+  })
