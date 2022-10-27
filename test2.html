@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <style>
+        
+    </style>
+    <script>
+      $(function () {
+        $(".variable-width").slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+        });
+      });
+    </script>
+    
+  </head>
+  <body>
+    <div class="variable-width">
+        <div class="slider1"><img src="./images/main_technology_img1.jpg" alt=""></div>
+        <div class="slider2"><img src="./images/main_technology_img2.jpg" alt=""></div>
+        <div class="slider3"><img src="./images/main_technology_img3.jpg" alt=""></div>
+        <div class="slider2"><img src="./images/main_technology_img4.jpg" alt=""></div>
+        <div class="slider3"><img src="./images/main_technology_img5.jpg" alt=""></div>
+      </div>
+  </body>
+</html>
