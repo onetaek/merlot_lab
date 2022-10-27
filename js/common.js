@@ -1,10 +1,3 @@
-$(function () {
-    $(".variable-width").slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      centerMode: true,
-      variableWidth: true,
-    });
-  });
+$(window).on('load',function(){
+  console.log('테스트')
+})
