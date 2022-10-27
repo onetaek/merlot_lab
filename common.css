@@ -1454,7 +1454,24 @@ box-sizing: border-box;*/
     width: 100%;
   }
 }
-
+@media screen and (min-width: 768px) {
+}
+ @media screen and (max-width: 767px) {
+  #section3 > div {
+    flex-direction: column;
+    width: 100%;
+    height: 705px;
+  }
+  #section3 > div .contentWrap > section > ul li a img  {
+    display: none;
+  }
+  #section3 > div .contentWrap { position: relative;}
+  #section3 > div .contentWrap > section > a { 
+   position: absolute;
+   bottom: -80px;
+  
+  }
+}
 /*---------------------------------------------------------------------------------------------*/
 /*-------------section4----------------*/
 #section4 {
