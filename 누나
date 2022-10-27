@@ -1,0 +1,246 @@
+/* 상단 */
+#section2 {
+  width: 100%;
+  padding-bottom: 220px;
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
+}
+#section2 .section2Title {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background: url(./images/main_technology_bg.jpg) no-repeat #171d3d bottom
+    140px right;
+  padding-top: 100px;
+  transition: 1s;
+}
+#section2 .section2Title .section2Text {
+  
+}
+#section2 .section2Title .section2Text > div {
+  width: 1340px;
+  height: 140px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  margin: 0 auto;
+  transition: 1s;
+}
+#section2 .section2Title .section2Text h2 {
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  margin-top: 10px;
+  transition: 1s;
+}
+#section2 .section2Title .section2Text p {
+  font-size: 18px;
+  color: #babbbe;
+  transition: 1s;
+}
+/* 하단 */
+#section2 .section2Bottom {
+  width: 1340px;
+  height: 460px;
+  margin: -175px auto 0;
+  background-color: #fff;
+  position: relative;
+  transition: 1s;
+}
+#section2 .section2Bottom::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  /* background-color: rgb(163, 163, 255); */
+  background-color: #fff;
+  z-index: 1;
+  overflow: hidden;
+}
+#section2 .section2Bottom .contentWrap {
+  display: flex;
+  position: absolute;
+  top: 68px;
+  left: 60px;
+  width: 137%;
+  height: 480px;
+  z-index: 100;
+  transition: 1s;
+}
+#section2 .section2Bottom .contentWrap a {
+  width: 450px;
+  height: 400px;
+  padding: 0 17px;
+  display: block;
+  /* background:rgb(255, 92, 119); */
+}
+#section2 .section2Bottom .contentWrap .techLink1:hover .content1 {
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink2:hover .content2 {
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink3:hover .content3 {
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink4:hover .content4 {
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap .techLink5:hover .content5 {
+  transform: scale(1.1);
+}
+#section2 .section2Bottom .contentWrap a .content {
+}
+#section2 .section2Bottom .contentWrap a .content .contentImgWrap {
+  width: 420px;
+  height: 275px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+#section2 .section2Bottom .contentWrap a .content .contentImg {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  text-indent: -9999px;
+}
+
+#section2 .contentWrap .content1 {
+  background: url(./images/main_technology_img1.jpg)no-repeat top center;
+}
+#section2 .contentWrap .content2 {
+  background: url(./images/main_technology_img2.jpg)no-repeat top center;
+}
+#section2 .contentWrap .content3 {
+  background: url(./images/main_technology_img3.jpg)no-repeat top center;
+}
+#section2 .contentWrap .content4 {
+  background: url(./images/main_technology_img4.jpg)no-repeat top center;
+}
+#section2 .contentWrap .content5 {
+  background: url(./images/main_technology_img5.jpg)no-repeat top center;
+}
+#section2 .section2Bottom .contentWrap a .content .techCont {
+}
+#section2 .section2Bottom .contentWrap a .content .techCont h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+#section2 .section2Bottom .contentWrap a .content .techCont h3 span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #583cf2;
+  margin-right: 20px;
+}
+#section2 .section2Bottom .contentWrap a .content .techCont p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #5d5d5d;
+  margin-left: 45px;
+  word-break: keep-all;
+}
+/* 타이틀 아래 좌우버튼 */
+#section2 .section2Bottom #section2TitleBtn {
+  position: absolute;
+  top: -120px;
+  width: 500px;
+  height: 30px;
+}
+#section2 .section2Bottom #section2TitleBtn button {
+  width: 10px;
+  height: 20px;
+  text-indent: -9999px;
+  position: absolute;
+  background: no-repeat center;
+}
+#section2 .section2Bottom #section2TitleBtn button.left {
+  left: 5px;
+  background-image: url(./images/button_left_white.png);
+  background-size: cover;
+}
+#section2 .section2Bottom #section2TitleBtn button.left:active .contentWrap {
+  transform: translateX(-20%);
+}
+#section2 .section2Bottom #section2TitleBtn button.left::after {
+  content: "";
+  position: absolute;
+  left: 33px;
+  top: 3px;
+  height: 15px;
+  border-left: 1px solid #adadad;
+}
+#section2 .section2Bottom #section2TitleBtn button.right {
+  left: 60px;
+  background-image: url(./images/button_right_white.png);
+  background-size: cover;
+}
+/* 바닥 원형 버튼 */
+#section2WrapBtn {
+  width: 100vw;
+  text-align: center;
+}
+#section2WrapBtn button {
+  position: relative;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  position: relative;
+  margin: 0 4px;
+}
+#section2WrapBtn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  opacity: 0.25;
+  background-color: #583cf2;
+  border-radius: 50%;
+}
+#section2WrapBtn button:before {
+  opacity: 0.3;
+}
+@media (min-width: 1441px) {
+  #section2 .section2Bottom .contentWrap a { width: 100%; height: 100%; }
+  #section2WrapBtn { display: none; }
+}
+@media (max-width: 1440px) {
+  #section2 .section2Title { background-position: bottom right; height: 380px; }
+  #section2 .section2Bottom{ margin: 0 auto; }
+  #section2 .section2Bottom .contentWrap { top: 40px; left: 20px; }
+  #section2 .section2Bottom .contentWrap a { width: 80%; height: 80%; }
+  #section2WrapBtn { display: none; }
+  #section2 .section2Bottom #section2TitleBtn { bottom: 600px; }
+}
+@media all and (max-width: 1280px) {
+  #section2 { padding-bottom: 120px }
+  #section2 .section2Title { background-size: auto 100%;}
+  #section2 .section2Title .section2Text h2 { font-size: 38px; }
+  #section2 .section2Title .section2Text p { font-size: 17px; }
+  #section2 .section2Title { background-size: auto 100%; } 
+}
+@media all and (max-width: 970px) {
+  #section2 { padding-bottom: 100px }
+  #section2 .section2Title { background-size: auto 100%; height: 300px; }
+  #section2 .section2Title .section2Text > div { height: 90px; }
+  #section2 .section2Title .section2Text h2 { font-size: 36px; }
+  #section2 .section2Title .section2Text p { font-size: 16px; }
+  #section2 .section2Bottom .contentWrap a .content .techCont p { margin-top: 10px; font-size: 15px; }
+  #section2 .section2Bottom #section2TitleBtn { bottom: 560px; }
+  #section2WrapBtn { display: none; }
+}
+@media all and (max-width: 640px) {
+  #section2 { padding-bottom: 70px }
+  #section2 .section2Title { height: 220px; padding-top: 50px; }
+  #section2 .section2Title .section2Text > div { height: 70px; }
+  #section2 .section2Title .section2Text h2 { font-size: 30px; }
+  #section2 .section2Bottom #section2TitleBtn { bottom: 540px; }
+  #section2WrapBtn { display: block; }
+}
