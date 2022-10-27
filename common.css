@@ -1218,6 +1218,7 @@ main {
   width: 870px;
   height: 420px;
   position: relative;
+  top: -60px;
 }
 
 #section3 > div .contentWrap > section {
@@ -1230,35 +1231,36 @@ main {
   display: flex;
   gap: 20px;
 }
-.contentWrap h3{
+#section3 .contentWrap h3{
   /* border: 1px solid #000; */
   width: 70px;
   margin-top: 50px;
-  text-decoration: none;
-  color: #3a3a3a;
+  text-decoration: none; color: #777;
   display: block;
   position: relative;
   z-index: 2;
 }
-.contentWrap h3::after {
+#section3 .contentWrap h3::after {
   content: "";
   width: 60px; 
-  height: 10px;
-  background: #dea5ed;
+  height: 13px;
+  background: #e3dcff;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -4px; left: 0;
   z-index: -1;
   display: none;
 }
 
-.contentWrap h3.pinkBorder::after {
-  display: block;
+#section3 .contentWrap h3:hover {
+  cursor: pointer; color: #000; 
 }
-.contentWrap h3:hover {
+#section3 .contentWrap h3.pinkBorder::after {
+  display: block; 
+}
+#section3 .contentWrap h3.pinkBorder {
   color: #000;
 }
-.contentWrap h3:hover::after {
+#section3 .contentWrap h3:hover::after {
   display: block;
   animation: ani 0.5s;
 }
@@ -1272,16 +1274,19 @@ main {
 }
 /*------------------------------------------------------------------------*/
 #section3 > div .contentWrap > .news {
+  width: 870px;
+  height: 393px;
   /* display: none; */
-  position: relative;
+  /* position: relative; */
 }
 #section3 > div .contentWrap > .notice ul {
-  /* display: none; */
-  opacity: 0;
+  /* opacity: 0; */
+  display: none;
 }
 #section3 > div .contentWrap > .notice {
   width: 870px;
   height: 393px;
+  /* position: relative; */
 }
 #section3 > div .contentWrap > section h3 {
   font-size: 100%;
@@ -1296,7 +1301,6 @@ margin: 0;
 box-sizing: border-box;*/
 }
 #section3 > div .contentWrap > .notice h3 {
-  color: #777;
   position: relative;
   left: 100px;
   font-size: 100%;
@@ -1306,7 +1310,8 @@ box-sizing: border-box;*/
   margin-top: 15px;
   border-top: 2px solid #222;
 }
-#section3 > div .contentWrap > section > ul li {
+#section3 > div .contentWrap > section > ul li p { border: 0px solid black;
+  height: 42px; position: relative; top: 10px; overflow: hidden; margin-top: 10px;
 }
 #section3 > div .contentWrap > section > ul li a {
   padding: 22px 10px;
@@ -1321,7 +1326,7 @@ box-sizing: border-box;*/
 }
 #section3 > div .contentWrap > section > ul li a img {
   width: 230px;
-  height: 112px;
+  height: 135px;
   display: block;
   flex-shrink: 0;
   position: relative;
@@ -1495,12 +1500,11 @@ box-sizing: border-box;*/
   #section3 > div .contentWrap > section > ul li a img {
     display: none;
   }
-  #section3 > div .contentWrap {
-    position: relative;
-  }
-  #section3 > div .contentWrap > section > a {
-    position: absolute;
-    bottom: -80px;
+  #section3 > div .contentWrap { position: relative;}
+  #section3 > div .contentWrap > section > a { 
+   position: absolute;
+   bottom: -140px;
+  
   }
 }
 /*---------------------------------------------------------------------------------------------*/
