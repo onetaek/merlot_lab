@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
     <style>
-        p{
-            border:1px solid black;
-            position:relative;
+        #wrap{
+            width:500px;
         }
-        :root {
-            --one-background: red;
-        }
-        p::before{
-            content:"";
-            position:absolute;
-            top:0;
-            left:0;
-            width:10px;
-            height:10px;
-            background:var(--one-background);
-        }
+      .slider {
+        height: 600px;
+      }
+      .cont1 {
+        background: red;
+        height:100%;
+      }
+      .cont2 {
+        background: blue;
+        height:100%;
+
+      }
+      .cont3 {
+        background: green;
+        height:100%;
+
+      }
     </style>
-</head>
-<body>
-    <p>테스트</p>
-    <script>
-        let p = document.querySelector('p');
-        
-        let test = ()=>{
-            p.classList.toggle('bad')
-            console.log(p.classList.contains('bad'));
-            if(p.classList.contains('bad')){
-                document.documentElement.style.setProperty('--one-background','#583cf2');
-            }else{
-                document.documentElement.style.setProperty('--one-background','red');
-
-            }
-        }
-
-        p.addEventListener('click',function(){
-            test();
-        })
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./boxslider/js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script defer>
+      $(document).ready(function () {
+        $(".slider").bxSlider();
+      });
     </script>
-</body>
+  </head>
+  <body>
+    <div id="wrap">
+        <div class="slider">
+            <div class="cont1">I am a slide.</div>
+            <div class="cont2">I am another slide.</div>
+            <div class="cont3">테스트</div>
+            <div class="cont4">테스트</div>
+            <div class="cont5">테스트</div>
+        </div>
+    </div>
+    
+  </body>
 </html>
