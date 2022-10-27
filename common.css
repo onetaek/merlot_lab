@@ -899,6 +899,7 @@ main {
 /* 하단 */
 #section2 .section2Bottom {
   width: 1340px;
+  height: 460px;
   margin: -175px auto 0;
   background-color: #fff;
   position: relative;
@@ -964,19 +965,19 @@ main {
 }
 
 #section2 .contentWrap .content1 {
-  background-image: url(./images/main_technology_img1.jpg);
+  background: url(./images/main_technology_img1.jpg)no-repeat top center;
 }
 #section2 .contentWrap .content2 {
-  background-image: url(./images/main_technology_img2.jpg);
+  background: url(./images/main_technology_img2.jpg)no-repeat top center;
 }
 #section2 .contentWrap .content3 {
-  background-image: url(./images/main_technology_img3.jpg);
+  background: url(./images/main_technology_img3.jpg)no-repeat top center;
 }
 #section2 .contentWrap .content4 {
-  background-image: url(./images/main_technology_img4.jpg);
+  background: url(./images/main_technology_img4.jpg)no-repeat top center;
 }
 #section2 .contentWrap .content5 {
-  background-image: url(./images/main_technology_img5.jpg);
+  background: url(./images/main_technology_img5.jpg)no-repeat top center;
 }
 #section2 .section2Bottom .contentWrap a .content .techCont {
 }
@@ -1000,8 +1001,7 @@ main {
 /* 타이틀 아래 좌우버튼 */
 #section2 .section2Bottom #section2TitleBtn {
   position: absolute;
-  top: -100px;
-  left: 25px;
+  top: -120px;
   width: 500px;
   height: 30px;
 }
@@ -1061,103 +1061,44 @@ main {
 #section2WrapBtn button:before {
   opacity: 0.3;
 }
-#section2WrapBtn button.two {
-}
-#section2WrapBtn button.three {
-}
-#section2WrapBtn button.four {
-}
-#section2WrapBtn button.five {
-}
 @media (min-width: 1441px) {
-  #section2 .section2Bottom .contentWrap a {width: 100%; height: 100%; }
+  #section2 .section2Bottom .contentWrap a { width: 100%; height: 100%; }
   #section2WrapBtn { display: none; }
 }
 @media (max-width: 1440px) {
-  #section2 .section2Title {
-    background-position: bottom right;
-    height: 380px;
-  }
-  #section2 .section2Bottom {
-    width: 1440px;
-  }
-  #section2 .section2Bottom .contentWrap a {
-    width: 80%;
-    height: 80%;
-  }
-  #section2 .section2Bottom .contentWrap {
-    padding: 40px 10px 0;
-  }
-  #section2WrapBtn {
-    display: none;
-  }
-  #section2 .section2Bottom {
-    margin: 0 auto;
-  }
+  #section2 .section2Title { background-position: bottom right; height: 380px; }
+  #section2 .section2Bottom{ margin: 0 auto; }
+  #section2 .section2Bottom .contentWrap { top: 40px; left: 20px; }
+  #section2 .section2Bottom .contentWrap a { width: 80%; height: 80%; }
+  #section2WrapBtn { display: none; }
+  #section2 .section2Bottom #section2TitleBtn { bottom: 600px; }
 }
 @media all and (max-width: 1280px) {
-  #section2 {
-    padding-bottom: 120px;
-  }
-  #section2 .section2Title {
-    background-size: auto 100%;
-  }
-  #section2 .section2Title .section2Text h2 {
-    font-size: 38px;
-  }
-  #section2 .section2Title .section2Text p {
-    font-size: 17px;
-  }
-  #section2 .section2Title {
-    background-size: auto 100%;
-  }
+  #section2 { padding-bottom: 120px }
+  #section2 .section2Title { background-size: auto 100%;}
+  #section2 .section2Title .section2Text h2 { font-size: 38px; }
+  #section2 .section2Title .section2Text p { font-size: 17px; }
+  #section2 .section2Title { background-size: auto 100%; } 
 }
 @media all and (max-width: 970px) {
-  #section2 {
-    padding-bottom: 100px;
-  }
-  #section2 .section2Title {
-    background-size: auto 100%;
-    height: 300px;
-  }
-  #section2 .section2Title .section2Text > div {
-    height: 90px;
-  }
-  #section2 .section2Title .section2Text h2 {
-    font-size: 36px;
-  }
-  #section2 .section2Title .section2Text p {
-    font-size: 16px;
-  }
-  #section2 .section2Bottom .contentWrap a .content .techCont p {
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  #section2WrapBtn {
-    display: none;
-  }
+  #section2 { padding-bottom: 100px }
+  #section2 .section2Title { background-size: auto 100%; height: 300px; }
+  #section2 .section2Title .section2Text > div { height: 90px; }
+  #section2 .section2Title .section2Text h2 { font-size: 36px; }
+  #section2 .section2Title .section2Text p { font-size: 16px; }
+  #section2 .section2Bottom .contentWrap a .content .techCont p { margin-top: 10px; font-size: 15px; }
+  #section2 .section2Bottom #section2TitleBtn { bottom: 560px; }
+  #section2WrapBtn { display: none; }
 }
 @media all and (max-width: 640px) {
-  #section2 {
-    padding-bottom: 70px;
-  }
-  #section2 .section2Title {
-    height: 220px;
-    padding-top: 50px;
-  }
-  #section2 .section2Title .section2Text > div {
-    height: 70px;
-  }
-  #section2 .section2Title .section2Text h2 {
-    font-size: 30px;
-  }
-  #section2 .section2Bottom #section2TitleBtn {
-    top: -80px;
-  }
-  #section2WrapBtn {
-    display: block;
-  }
+  #section2 { padding-bottom: 70px }
+  #section2 .section2Title { height: 220px; padding-top: 50px; }
+  #section2 .section2Title .section2Text > div { height: 70px; }
+  #section2 .section2Title .section2Text h2 { font-size: 30px; }
+  #section2 .section2Bottom #section2TitleBtn { bottom: 540px; }
+  #section2WrapBtn { display: block; }
 }
+
 /*-------------------------section3----------------------------------------------*/
 #section3 {
   padding: 120px 0 230px 0;
