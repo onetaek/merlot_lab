@@ -895,6 +895,40 @@ main {
   color: #babbbe;
   transition: 1s;
 }
+/* 타이틀 아래 좌우버튼 */
+#section2TitleBtn {
+  position: relative;
+  top: 20px; left: 0;
+  width: 500px;
+  height: 30px;
+  order: -1;
+}
+#section2TitleBtn button {
+  width: 10px;
+  height: 20px;
+  text-indent: -9999px;
+  position: absolute;
+  background: no-repeat center;
+}
+#section2TitleBtn button.left {
+  left: 5px;
+  background-image: url(./images/button_left_white.png);
+  background-size: cover;
+}
+
+#section2TitleBtn button.left::after {
+  content: "";
+  position: absolute;
+  left: 33px;
+  top: 3px;
+  height: 15px;
+  border-left: 1px solid #adadad;
+}
+#section2TitleBtn button.right {
+  left: 60px;
+  background-image: url(./images/button_right_white.png);
+  background-size: cover;
+}
 /* 하단 */
 #section2 .section2Bottom {
   margin: 0 auto;
@@ -980,40 +1014,7 @@ main {
   margin-left: 45px;
   word-break: keep-all;
 }
-/* 타이틀 아래 좌우버튼 */
-#section2 .section2Bottom #section2TitleBtn {
-  position: absolute;
-  top: -120px;
-  width: 500px;
-  height: 30px;
-  background: gold;
-}
-#section2 .section2Bottom #section2TitleBtn button {
-  /* width: 10px;
-  height: 20px;
-  text-indent: -9999px;
-  position: absolute;
-  background: no-repeat center; */
-}
-#section2 .section2Bottom #section2TitleBtn button.left {
-  /* left: 5px;
-  background-image: url(./images/button_left_white.png);
-  background-size: cover; */
-}
 
-#section2 .section2Bottom #section2TitleBtn button.left::after {
-  /* content: "";
-  position: absolute;
-  left: 33px;
-  top: 3px;
-  height: 15px;
-  border-left: 1px solid #adadad; */
-}
-#section2 .section2Bottom #section2TitleBtn button.right {
-  /* left: 60px;
-  background-image: url(./images/button_right_white.png);
-  background-size: cover; */
-}
 /* 바닥 원형 버튼 */
 #section2WrapBtn {
   width:100%;
@@ -1022,7 +1023,6 @@ main {
   
 }
 #section2WrapBtn button {
-  position: relative;
   top: 30px;
   width: 12px;
   height: 12px;
