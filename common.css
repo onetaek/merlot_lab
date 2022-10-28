@@ -944,7 +944,7 @@ main {
 #section2 .section2Bottom .innerWrap {
   width:166.6666666666666666666666667%;
   display: flex;
-  padding-top:50px;
+  padding:50px 0;
 }
 #section2 .section2Bottom .innerWrap a {
   width:20%;
@@ -1016,19 +1016,25 @@ main {
 }
 
 /* 바닥 원형 버튼 */
+#bottomBtn { 
+  width: 100%; 
+  /* height: 30px; */
+}
 #section2WrapBtn {
-  width:100%;
+  width:150px;
+  margin: 0 auto;
   text-align: center;
-  height:30px;
-  
+  /* height:30px; */
+  position:relative;
 }
 #section2WrapBtn button {
-  top: 30px;
+  /* top: 30px; */
+  /* border: 1px solid #000; */
   width: 12px;
   height: 12px;
   text-indent: -9999px;
-  position: relative;
   margin: 0 4px;
+  position: relative;
 }
 #section2WrapBtn button::before {
   content: "";
@@ -1040,9 +1046,10 @@ main {
   opacity: 0.25;
   background-color: #583cf2;
   border-radius: 50%;
+  /* z-index: -1; */
 }
-#section2WrapBtn button:before {
-  opacity: 0.3;
+#section2WrapBtn button.on::before {
+  opacity: 1;
 }
 
 /*section2media*/
@@ -1111,6 +1118,9 @@ main {
   }
   #section2 .section2Title .section2Text p {
     font-size: 16px;
+  }
+  #section2 .section2Bottom{
+    height: auto;
   }
   #section2 .section2Bottom .innerWrap{
     width:250%;
