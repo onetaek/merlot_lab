@@ -55,3 +55,18 @@ for( let i = 0 ; i < mobile_gnb.length; i++){
         toggle_snb(i);
     })
 }
+
+
+/* 메뉴 호버 */
+
+$('#header #gnb #gnbList > li > a').on('mouseenter',function(){
+    console.log($(this).next().children('li'));
+    $(this).next().css({opacity:1,padding:'10px 0'});
+    $(this).next().children('li').css({height:24,margin:'10px 0'})
+    $(this).next().children('li').children('a').css({fontSize:16,fontColor:'#8974ff'})
+})
+$('#header #gnb #gnbList > li').on('mouseleave',function(){
+    $('.snb').css({opacity:0,padding:'0'});
+    $('.snb').children('li').css({height:0,margin:0});
+    $('.snb').children('li').children('a').css({fontSize:0});
+})
