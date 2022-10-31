@@ -8,9 +8,9 @@
     <script src="https://kit.fontawesome.com/91c8f2dd57.js" crossorigin="anonymous"></script>
     <script src="./js/header.js" defer></script>
     <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/section2.js" defer></script>
     <!-- https://merlotlab.com/ -->
     <link rel="stylesheet" href="./common.css" />
-
   </head>
   <body>
     <!---------------header------------------>
@@ -226,11 +226,15 @@
             <div>
               <h2>technology</h2> 
               <p>메를로랩의 혁신적인 미래기술</p>
+              <div id="section2TitleBtn">
+                <button class="left">왼쪽으로 이동</button>
+                <button class="right">오른쪽으로 이동</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="section2Bottom">
-          <div class="contentWrap">
+          <div class="innerWrap">
             <a href="#" class="techLink1">
               <div class= "content">
                 <div class="contentImgWrap">
@@ -290,7 +294,7 @@
             <a href="#" class="techLink5">
               <div class= "content">
                 <div class="contentImgWrap">
-                  <div class="contentImg content5">05 서비스 앱 이미지
+                  <div class="contentImg content5">05 서비스 앱 이미지</div>
                 </div>
                 <div class="techCont">
                   <h3><span>/05</span> 서비스 앱</h3>
@@ -302,12 +306,10 @@
               </div>
             </a>
           </div>
-          <div id="section2TitleBtn">
-            <button class="left">왼쪽으로 이동</button>
-            <button class="right">오른쪽으로 이동</button>
-          </div>
+        </div>
+        <div id="bottomBtn">
           <div id="section2WrapBtn">
-            <button class="one">1</button>
+            <button class="on one">1</button>
             <button class="two">2</button>
             <button class="three">3</button>
             <button class="four">4</button>
@@ -327,8 +329,8 @@
           </div>
           <div class="contentWrap">
             <section class="news">
-              <h3>보도자료</h3>
-              <ul>
+              <h3 class="pinkBorder">보도자료</h3>
+              <ul class="memu">
                 <li>
                   <a href="#" class="news_1">
                     <img src="./images/20220119160323628_n.jpg" alt="연습중" id="slslsls"  />
@@ -365,10 +367,10 @@
                   </a>
                 </li>
               </ul>
-              <a id="vi" href="#">view more</a>
+              <a class="vi" href="#">view more</a>
             </section>
             <section class="notice">
-              <h3>공지사항</h3>
+              <h3 >공지사항</h3>
               <ul>
                 <li>
                   <a href="#" class="notice_1">
@@ -407,7 +409,7 @@
                   </a>
                 </li>
               </ul>
-              <a id="vi" href="#">view more</a>
+              <a class="vi" href="#">view more</a>
             </section>
           </div>
         </div>

@@ -55,4 +55,3 @@ for( let i = 0 ; i < mobile_gnb.length; i++){
         toggle_snb(i);
     })
 }
-
