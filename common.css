@@ -1538,6 +1538,10 @@ box-sizing: border-box;*/
 #section4 .locationHouse div a i {
   display: flex;
   align-items: center;
+  transition:.3s;
+}
+#section4 .locationHouse div a i:hover{
+  transform:translateX(10px);
 }
 #section4 .locationWrap .locationMap {
   width: 57.81%;;
