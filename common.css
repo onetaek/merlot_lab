@@ -54,6 +54,17 @@ button {
   width: 100%;
   overflow: hidden;
 }
+/* keyframe */
+@keyframes lefToRight{
+  from{
+    transition:-200px;
+    opacity:0;
+  }
+  to{
+    transition:0;
+    opacity:1;
+  }
+}
 /* -----------------header------------------ */
 #headerWrap {
   width: 100%;

@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
+    <script>
+      function solution(numbers) {
+    let sum = 0
+    let max_sum = 1+2+3+4+5+6+7+8+9;
+    for(let i = 0 ; numbers.length ; i++){
+        max_sum -= numbers[i]
+    }
+    return max_sum;
+}
+
+console.log(solution([1,2,3,4,5,6,7,0]))
+    </script>
     <style>
         #wrap{
             width:500px;
